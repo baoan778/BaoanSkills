@@ -1,0 +1,6 @@
+interface:
+  display_name: Windows Privilege Escalation
+  short_description: Enumerate and exploit Windows privilege escalation paths.
+  default_prompt: Use $windows-privilege-escalation to enumerate privilege escalation paths on this explicitly authorized Windows host.
+policy:
+  allow_implicit_invocation: true

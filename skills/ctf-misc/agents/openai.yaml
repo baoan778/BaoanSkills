@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Misc
+  short_description: Triage encoding, jail, RF, and cross-category CTF puzzles.
+  default_prompt: Use $ctf-misc to triage this cross-category CTF challenge and test the most likely encoding, jail, RF, or puzzle path.
+policy:
+  allow_implicit_invocation: true

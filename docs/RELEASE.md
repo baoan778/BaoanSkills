@@ -1,0 +1,146 @@
+# Release process
+
+Releases are built from a clean public snapshot, never from the broad local
+staging checkout.
+
+## Preconditions
+
+- CI is green on the release commit.
+- `release/public-skills.txt` contains only reviewed skills.
+- `release/provenance.lock.json` matches every published skill file.
+- Generated index and provenance reports are current.
+- No published skill has `license: NOASSERTION`.
+- Third-party licenses, pinned commits, evidence, and notices are current.
+- No credentials, private target data, personal absolute paths, or raw local
+  knowledge-base content are present. The allowlisted `ctf-knowledge-base` cards,
+  retrieval code, and path-only manifest are expected.
+- The changelog is updated.
+- The release tag uses `vMAJOR.MINOR.PATCH` or a valid prerelease suffix.
+
+## Build and validate
+
+Install the development dependencies and run the source checks first:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest
+python -m ruff check scripts tests
+python scripts/validate_skills.py --strict
+python scripts/build_kb_manifest.py --check
+python scripts/check_publication.py --check
+python scripts/check_workflows.py
+python scripts/check_links.py
+python scripts/check_whitespace.py
+python scripts/check_markdown_structure.py
+python scripts/check_resources.py
+python scripts/check_skill_layout.py
+python scripts/check_encoding.py
+python scripts/smoke_test_scripts.py
+python scripts/apply_skill_quality.py --check
+python scripts/generate_agent_metadata.py --check
+python scripts/build_index.py --check
+python scripts/build_provenance.py --check
+python scripts/check_release_readiness.py --strict
+```
+
+Build a fresh snapshot:
+
+```bash
+python scripts/build_public_bundle.py --output ../baoanskills-public
+```
+
+To replace a previously generated snapshot, use `--force` only after verifying
+the destination is the expected `baoanskills-public` directory. The builder
+fails on source publication drift and runs exclusive checks on the output,
+including the copied tests and development configuration.
+
+The installer verifies every requested skill file against the snapshot's
+`release/provenance.lock.json` before copying. Treat the lock as the published
+integrity manifest: do not edit it to make a drifted checkout installable.
+
+## Release automation
+
+[`release.yml`](../.github/workflows/release.yml) runs when a `v*` tag is pushed
+to `baoan778/BaoanSkills`. It:
+
+1. validates the tag format;
+2. installs the pinned development dependencies;
+3. builds and validates the clean public snapshot;
+4. creates deterministic `baoanskills-release.tar.gz` and
+   `baoanskills-release.zip` archives with matching SHA-256 files;
+5. verifies both checksums, extracts the zip, installs a sample skill, and
+   confirms that a tampered snapshot is rejected without creating a target;
+6. uploads all four artifacts to the workflow run;
+7. creates a GitHub release with generated notes and both archive formats.
+
+Only create the tag after the release commit is merged and the validation and
+CodeQL checks are green. Sign the tag when a signing key is available.
+
+The workflow is limited to the canonical repository. Forks and local staging
+checkouts cannot create an official release from it.
+
+## Repository settings
+
+These controls live in GitHub settings rather than repository files:
+
+- protect `main` and require the `validate` and CodeQL checks;
+- require a pull request and maintainer approval before merging;
+- enable GitHub Security Advisories and secret scanning;
+- require signed commits or signed tags when the maintainer workflow supports
+  them;
+- restrict release creation to the release workflow when organization policy
+  permits it.
+
+## Verify downloaded artifacts
+
+Linux and macOS:
+
+```bash
+sha256sum -c baoanskills-release.tar.gz.sha256
+```
+
+Windows PowerShell:
+
+```powershell
+$expected = (Get-Content .\baoanskills-release.zip.sha256 -Raw).Split()[0]
+$actual = (Get-FileHash .\baoanskills-release.zip -Algorithm SHA256).Hash.ToLower()
+if ($actual -ne $expected) { throw 'Archive checksum mismatch' }
+```
+
+The `.zip` archive is the recommended Windows download. Both formats contain
+the same `baoanskills-public` directory as their single top-level payload.
+
+The archive checksum protects transfer integrity. The embedded provenance lock
+detects per-file drift inside the snapshot, but it is not a cryptographic
+signature; verify release provenance separately when that assurance is needed.
+
+## Publish
+
+1. Publish the contents of `baoanskills-public` as the public repository root or
+   use the workflow release archive.
+2. Do not publish ignored staging directories from the development checkout.
+3. Include the generated `NOTICE`, `docs/PROVENANCE.md`, and
+   `docs/provenance.csv`.
+4. State that the three Trail of Bits-derived skills remain CC BY-SA 4.0.
+5. Include migration notes, known limitations, and the authorization policy in
+   the release notes.
+6. Verify the published tree contains exactly the allowlisted skill directories.
+7. Confirm `ctf-knowledge-base` contains only curated cards, retrieval tooling, a
+   tool catalog, and a path-only manifest, with no raw corpus files.
+
+A local secret scan before publication is recommended when gitleaks is
+installed:
+
+```bash
+gitleaks dir ../baoanskills-public --redact --verbose
+```
+
+## Post-release
+
+- Confirm the tagged tree still passes the exclusive publication checks.
+- Verify the release archive contains no unlisted skills or raw local
+  knowledge-base files. Curated `ctf-knowledge-base` references and its path-only
+  manifest are allowed.
+- Check the attached SHA-256 checksum for each attached archive.
+- Keep the previous release available if users need to roll back.
+- If a secret is discovered, revoke it first and then remove it from history.

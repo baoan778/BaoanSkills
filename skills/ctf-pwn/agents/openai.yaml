@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Pwn
+  short_description: Exploit memory corruption, ROP, heap, and kernel targets.
+  default_prompt: Use $ctf-pwn to develop and validate an exploit for this CTF binary or service in its isolated challenge environment.
+policy:
+  allow_implicit_invocation: true

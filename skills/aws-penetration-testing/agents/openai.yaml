@@ -1,0 +1,6 @@
+interface:
+  display_name: AWS Penetration Testing
+  short_description: Assess AWS IAM, S3, Lambda, and metadata attack paths.
+  default_prompt: Use $aws-penetration-testing to assess this explicitly authorized AWS environment and stay within the approved read-only or mutating scope.
+policy:
+  allow_implicit_invocation: true

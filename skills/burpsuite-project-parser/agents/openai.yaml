@@ -1,0 +1,6 @@
+interface:
+  display_name: Burp Suite Project Parser
+  short_description: Search Burp projects for HTTP evidence and findings.
+  default_prompt: Use $burpsuite-project-parser to search this Burp Suite project for the requested HTTP evidence and summarize the findings.
+policy:
+  allow_implicit_invocation: true

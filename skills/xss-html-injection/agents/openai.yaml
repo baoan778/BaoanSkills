@@ -1,0 +1,6 @@
+interface:
+  display_name: XSS and HTML Injection
+  short_description: Test reflected, stored, and DOM XSS and HTML injection.
+  default_prompt: Use $xss-html-injection to test this explicitly authorized application for XSS and HTML injection with safe proof.
+policy:
+  allow_implicit_invocation: true

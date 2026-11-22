@@ -1,0 +1,6 @@
+interface:
+  display_name: SSH Penetration Testing
+  short_description: Assess SSH configuration, credentials, tunnels, and exposure.
+  default_prompt: Use $ssh-penetration-testing to assess this explicitly authorized SSH service and document configuration and access risks.
+policy:
+  allow_implicit_invocation: true

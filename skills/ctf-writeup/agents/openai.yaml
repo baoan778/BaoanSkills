@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Writeup
+  short_description: Turn a solved CTF challenge into a clear technical writeup.
+  default_prompt: Use $ctf-writeup to turn the supplied CTF solution into a reproducible, evidence-backed writeup.
+policy:
+  allow_implicit_invocation: true

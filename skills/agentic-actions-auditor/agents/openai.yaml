@@ -1,0 +1,6 @@
+interface:
+  display_name: Agentic Actions Auditor
+  short_description: Audit AI-agent GitHub Actions for trust and permission flaws.
+  default_prompt: Use $agentic-actions-auditor to audit this GitHub Actions setup for AI-agent trust, permission, and secret-handling flaws.
+policy:
+  allow_implicit_invocation: true

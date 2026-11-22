@@ -1,0 +1,6 @@
+interface:
+  display_name: Broken Authentication
+  short_description: Find authentication, session, and account recovery flaws.
+  default_prompt: Use $broken-authentication to review this explicitly authorized application for authentication, session, and account-takeover weaknesses.
+policy:
+  allow_implicit_invocation: true

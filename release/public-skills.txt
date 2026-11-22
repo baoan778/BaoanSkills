@@ -1,0 +1,48 @@
+# Public skill allowlist.
+# Keep synchronized with skills/.gitignore and release/provenance.lock.json.
+# A skill may be listed only after license and provenance review.
+
+# Original BaoanSkills CTF skills (maintainer attestation).
+ctf-ai-ml
+ctf-crypto
+ctf-forensics
+ctf-knowledge-base
+ctf-malware
+ctf-misc
+ctf-osint
+ctf-pwn
+ctf-reverse
+ctf-web
+ctf-writeup
+solve-challenge
+
+# Derived from zebbern/claude-code-guide at the pinned commit; MIT.
+api-fuzzing-bug-bounty
+aws-penetration-testing
+broken-authentication
+ethical-hacking-methodology
+file-path-traversal
+html-injection-testing
+idor-testing
+linux-privilege-escalation
+metasploit-framework
+pentest-checklist
+pentest-commands
+privilege-escalation-methods
+red-team-tools
+scanning-tools
+shodan-reconnaissance
+smtp-penetration-testing
+sql-injection-testing
+sqlmap-database-pentesting
+ssh-penetration-testing
+top-web-vulnerabilities
+windows-privilege-escalation
+wireshark-analysis
+wordpress-penetration-testing
+xss-html-injection
+
+# Derived from trailofbits/skills at the pinned commit; CC-BY-SA-4.0.
+agentic-actions-auditor
+burpsuite-project-parser
+semgrep-rule-creator

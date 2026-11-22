@@ -1,0 +1,6 @@
+interface:
+  display_name: WordPress Penetration Testing
+  short_description: Assess WordPress plugins, themes, users, and configuration.
+  default_prompt: Use $wordpress-penetration-testing to assess this explicitly authorized WordPress installation for common configuration and component weaknesses.
+policy:
+  allow_implicit_invocation: true

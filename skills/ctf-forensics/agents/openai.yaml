@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Forensics
+  short_description: Analyze disk, memory, network, and signal CTF artifacts.
+  default_prompt: Use $ctf-forensics to analyze these CTF forensic artifacts and recover the evidence needed to answer the challenge.
+policy:
+  allow_implicit_invocation: true

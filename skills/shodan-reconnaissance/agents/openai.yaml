@@ -1,0 +1,6 @@
+interface:
+  display_name: Shodan Reconnaissance
+  short_description: Assess exposure through Shodan search and host intelligence.
+  default_prompt: Use $shodan-reconnaissance to assess this explicitly authorized organization's public exposure in Shodan.
+policy:
+  allow_implicit_invocation: true

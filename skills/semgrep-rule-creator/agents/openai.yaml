@@ -1,0 +1,6 @@
+interface:
+  display_name: Semgrep Rule Creator
+  short_description: Write and validate custom Semgrep security rules.
+  default_prompt: Use $semgrep-rule-creator to create and validate Semgrep rules for the requested vulnerability pattern.
+policy:
+  allow_implicit_invocation: true

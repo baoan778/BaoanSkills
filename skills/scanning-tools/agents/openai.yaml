@@ -1,0 +1,6 @@
+interface:
+  display_name: Scanning Tools
+  short_description: Choose and run authorized network and vulnerability scanners.
+  default_prompt: Use $scanning-tools to select and run scanners against only this explicitly authorized scope.
+policy:
+  allow_implicit_invocation: true

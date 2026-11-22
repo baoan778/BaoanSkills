@@ -1,0 +1,6 @@
+interface:
+  display_name: Metasploit Framework
+  short_description: Use Metasploit modules, payloads, and sessions safely.
+  default_prompt: Use $metasploit-framework against this explicitly authorized target and validate the selected module safely.
+policy:
+  allow_implicit_invocation: true

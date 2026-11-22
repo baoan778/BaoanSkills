@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Challenge Router
+  short_description: Triage an unknown CTF challenge and route it correctly.
+  default_prompt: Use $solve-challenge to triage this unfamiliar CTF challenge and route it to the narrowest specialized skill.
+policy:
+  allow_implicit_invocation: true

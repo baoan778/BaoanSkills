@@ -1,0 +1,6 @@
+# Development and CI dependencies pinned for reproducible checks. Dependabot
+# proposes reviewed updates; update this file and validate the full CI matrix.
+PyYAML==6.0.3
+pytest==9.2.0
+pre-commit==4.7.0
+ruff==0.17.5

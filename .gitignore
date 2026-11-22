@@ -1,0 +1,51 @@
+# Local CTF knowledge base: deliberately not part of the public repository.
+CTF本地知识库/
+CTF-知识库/
+knowledge-base/
+local-kb/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+config.local.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node and generated web assets
+node_modules/
+dist/
+build/
+
+# Tool output and temporary artifacts
+*.tmp
+*.log
+*.sarif
+*.zip
+*.tar.gz
+*.sha256
+!assets/**/*.zip
+reports/
+output/
+tmp/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

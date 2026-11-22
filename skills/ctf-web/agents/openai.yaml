@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Web
+  short_description: Exploit web, API, auth, and client-side CTF targets.
+  default_prompt: Use $ctf-web to analyze this CTF web target, identify the exploitable flaw, and validate the flag path.
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: SMTP Penetration Testing
+  short_description: Assess SMTP relays, users, authentication, and configuration.
+  default_prompt: Use $smtp-penetration-testing to assess this explicitly authorized SMTP service for configuration and authentication weaknesses.
+policy:
+  allow_implicit_invocation: true

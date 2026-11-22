@@ -1,0 +1,8 @@
+# Every public skill, governance file, and release change needs maintainer review.
+* @baoan778
+
+# High-impact publication controls.
+/.github/ @baoan778
+/release/ @baoan778
+/scripts/ @baoan778
+/skills/ @baoan778

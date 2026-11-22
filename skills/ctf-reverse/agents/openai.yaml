@@ -1,0 +1,6 @@
+interface:
+  display_name: CTF Reverse
+  short_description: Reverse binaries, firmware, VMs, and obfuscated code.
+  default_prompt: Use $ctf-reverse to reverse this CTF target, recover its logic or key material, and document the solve path.
+policy:
+  allow_implicit_invocation: true

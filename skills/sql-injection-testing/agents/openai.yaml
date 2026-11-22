@@ -1,0 +1,6 @@
+interface:
+  display_name: SQL Injection Testing
+  short_description: Validate SQL injection manually and reason about impact.
+  default_prompt: Use $sql-injection-testing to validate suspected SQL injection in this explicitly authorized application with minimal-impact evidence.
+policy:
+  allow_implicit_invocation: true

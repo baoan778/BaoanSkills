@@ -1,0 +1,6 @@
+interface:
+  display_name: Wireshark Analysis
+  short_description: Analyze packet captures and investigate network behavior.
+  default_prompt: Use $wireshark-analysis to analyze this packet capture for the requested security investigation and preserve evidence.
+policy:
+  allow_implicit_invocation: true

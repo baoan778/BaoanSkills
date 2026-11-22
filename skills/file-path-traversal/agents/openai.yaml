@@ -1,0 +1,6 @@
+interface:
+  display_name: File Path Traversal
+  short_description: Find and validate file path traversal vulnerabilities.
+  default_prompt: Use $file-path-traversal to test this explicitly authorized target for file path traversal and document safe evidence.
+policy:
+  allow_implicit_invocation: true

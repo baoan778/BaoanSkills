@@ -1,0 +1,1869 @@
+{
+  "schema_version": 1,
+  "selection": "release/public-skills.txt",
+  "skills": {
+    "agentic-actions-auditor": {
+      "author": "Trail of Bits",
+      "files": [
+        {
+          "bytes": 317,
+          "path": "agents/openai.yaml",
+          "sha256": "90e308211fd450e11e81c63ca471285c405a088fcaf9e96d863c4a10d7781ac9"
+        },
+        {
+          "bytes": 22178,
+          "path": "SKILL.md",
+          "sha256": "5832975306ab7e4d2c4c19426c549611624b7b67fd588a8f4a24008ada0b3065"
+        }
+      ],
+      "license": "CC-BY-SA-4.0",
+      "license_evidence": "licenses/trailofbits-skills-CC-BY-SA-4.0.txt",
+      "license_evidence_sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "license_status": "verified",
+      "modifications": "Adapted for BaoanSkills; normalized frontmatter and formatting, preserved or added an authorization boundary, and reorganized metadata. Core skill content remains derived from the upstream version. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "5832975306ab7e4d2c4c19426c549611624b7b67fd588a8f4a24008ada0b3065",
+      "source": "https://github.com/trailofbits/skills/blob/149d7b21f4067765b82e67029730b42d228ef4b4/plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+      "source_repo": "https://github.com/trailofbits/skills",
+      "upstream_commit": "149d7b21f4067765b82e67029730b42d228ef4b4",
+      "upstream_path": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md"
+    },
+    "api-fuzzing-bug-bounty": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 311,
+          "path": "agents/openai.yaml",
+          "sha256": "2bb4bf0eba847d8738cc875412c10bf93c2d77b387dc19b48206a1df0903f6de"
+        },
+        {
+          "bytes": 11849,
+          "path": "SKILL.md",
+          "sha256": "4e8716975280493688292193d011369d95fe83200b8e4f5504b0a454e34b2dce"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "4e8716975280493688292193d011369d95fe83200b8e4f5504b0a454e34b2dce",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/api-fuzzing-bug-bounty/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/api-fuzzing-bug-bounty/SKILL.md"
+    },
+    "aws-penetration-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 327,
+          "path": "agents/openai.yaml",
+          "sha256": "9608263f3e09a17312a8a5001a54ecfe0d8fa8f65a9a963ed60bc381e6b8b70a"
+        },
+        {
+          "bytes": 12033,
+          "path": "references/advanced-aws-pentesting.md",
+          "sha256": "41556bd893e2f1762271c819b39d072d14b6fcc16879071bc060f470b8673c2d"
+        },
+        {
+          "bytes": 11477,
+          "path": "SKILL.md",
+          "sha256": "c0086e805cbc622be6d8c63e4df38f0f9032b771d63890888df41194efecedda"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "c0086e805cbc622be6d8c63e4df38f0f9032b771d63890888df41194efecedda",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/aws-penetration-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/aws-penetration-testing/SKILL.md"
+    },
+    "broken-authentication": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 326,
+          "path": "agents/openai.yaml",
+          "sha256": "ebff653fb587c56366deedf975a0e821c9b3e4898d071e7c94e075f9a529452f"
+        },
+        {
+          "bytes": 10392,
+          "path": "references/playbook.md",
+          "sha256": "dfca14ac7ff98dbeb48bbee8e20e6b0fcec18abf51c660328edbff4b245f1080"
+        },
+        {
+          "bytes": 4069,
+          "path": "SKILL.md",
+          "sha256": "12be5aeb92bf9b698202589ff008d1adcf905f2cabbaee99ccc12bf770d80857"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "12be5aeb92bf9b698202589ff008d1adcf905f2cabbaee99ccc12bf770d80857",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/broken-authentication/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/broken-authentication/SKILL.md"
+    },
+    "burpsuite-project-parser": {
+      "author": "Trail of Bits",
+      "files": [
+        {
+          "bytes": 311,
+          "path": "agents/openai.yaml",
+          "sha256": "ff5f10f6025a12703c11f39a6a9a1cbc644d73ad04246f9cab61d0fe8aaded6a"
+        },
+        {
+          "bytes": 600,
+          "path": "scripts/burp-search.sh",
+          "sha256": "9026107aa5a5b4a204a0c63de82028de3395ed68322ae73957f2142d5ef8e1bc"
+        },
+        {
+          "bytes": 13882,
+          "path": "SKILL.md",
+          "sha256": "2300ad144b20c2f86e64982642b8e13924092006054bd3a2dbf612021dcbc379"
+        }
+      ],
+      "license": "CC-BY-SA-4.0",
+      "license_evidence": "licenses/trailofbits-skills-CC-BY-SA-4.0.txt",
+      "license_evidence_sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "license_status": "verified",
+      "modifications": "Adapted for BaoanSkills; normalized frontmatter and formatting, preserved or added an authorization boundary, and reorganized metadata. Core skill content remains derived from the upstream version. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "2300ad144b20c2f86e64982642b8e13924092006054bd3a2dbf612021dcbc379",
+      "source": "https://github.com/trailofbits/skills/blob/149d7b21f4067765b82e67029730b42d228ef4b4/plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+      "source_repo": "https://github.com/trailofbits/skills",
+      "upstream_commit": "149d7b21f4067765b82e67029730b42d228ef4b4",
+      "upstream_path": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md"
+    },
+    "ctf-ai-ml": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 299,
+          "path": "agents/openai.yaml",
+          "sha256": "0d1ac8cb2c28ef376cfb0a61e87da3b043be2bb62cbef011d042b3d7fc79e507"
+        },
+        {
+          "bytes": 25947,
+          "path": "references/adversarial-ml.md",
+          "sha256": "977361484db31da28c084937939a83285dfce7475e3eb762f77b6b406a70a5d0"
+        },
+        {
+          "bytes": 20475,
+          "path": "references/llm-attacks.md",
+          "sha256": "81d64edc0f3da6a4ac9cf2dd77af1e67ee0a407c0e30c45bb89ac0977261d581"
+        },
+        {
+          "bytes": 19607,
+          "path": "references/model-attacks.md",
+          "sha256": "ed6d19135172fe5f81237570cc2b936899c88de3321e8ee750cfd3a0928fe7cb"
+        },
+        {
+          "bytes": 7849,
+          "path": "SKILL.md",
+          "sha256": "47e5c224e503d74408ac3ae291118f0a4e8f077438284fa5cd66373e2ea77c69"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "47e5c224e503d74408ac3ae291118f0a4e8f077438284fa5cd66373e2ea77c69",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-crypto": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 286,
+          "path": "agents/openai.yaml",
+          "sha256": "f644dd0bf1402e2571c4012066200975885ccf694829af6e81196871b479fce8"
+        },
+        {
+          "bytes": 28754,
+          "path": "references/advanced-math.md",
+          "sha256": "2bfe59c99c102eb424ad2e1dc3e4718b900d0abbc2595b294eb7d246fa89cc05"
+        },
+        {
+          "bytes": 30240,
+          "path": "references/classic-ciphers.md",
+          "sha256": "7215ca0d66fbdc137b1076f790759d06b6fe3c555223832f0cfcf2e8b6342b9b"
+        },
+        {
+          "bytes": 19289,
+          "path": "references/ecc-attacks.md",
+          "sha256": "2f2800edbd238f4a5b81df8aa5ce1e5a7b3980d1bddbba7d6aabd3727852e06a"
+        },
+        {
+          "bytes": 18554,
+          "path": "references/exotic-crypto-2.md",
+          "sha256": "02efe74268839a24ed8c6e64b205987253d60352fa869365a0b4611d6a7a01a0"
+        },
+        {
+          "bytes": 24612,
+          "path": "references/exotic-crypto.md",
+          "sha256": "138b0b112bafebf6cd2832d65d9d014806f7045380834a89ccb51ba57f12f3a5"
+        },
+        {
+          "bytes": 4613,
+          "path": "references/historical.md",
+          "sha256": "feb06b3ac5a981082b9a20223f02db21d93a100df39b7b5dba4b578677cbef52"
+        },
+        {
+          "bytes": 16292,
+          "path": "references/lattice-and-lwe.md",
+          "sha256": "3dd0feadef36f111a8713914a6713263b440928595157ad0bc336d6c88e7d7a1"
+        },
+        {
+          "bytes": 29494,
+          "path": "references/modern-ciphers-2.md",
+          "sha256": "ced21afc8af2475a4b574524e06dbd64ff460eb66a32cf69984a516080bc5467"
+        },
+        {
+          "bytes": 25710,
+          "path": "references/modern-ciphers-3.md",
+          "sha256": "6cb3abeb76bb5515fd0f47744575e5462a0d1fb5eccc9a70b45c47b9d6f7a623"
+        },
+        {
+          "bytes": 32721,
+          "path": "references/modern-ciphers.md",
+          "sha256": "f830d11578d4c34ae1f8a559940fddccb1961f62f8fff8bc94adb248b7a60825"
+        },
+        {
+          "bytes": 12464,
+          "path": "references/prng-attacks.md",
+          "sha256": "d089a3e80a4571a76af024ddbd8db9542e2f49e2a92076635b835223f5391a5b"
+        },
+        {
+          "bytes": 25431,
+          "path": "references/prng.md",
+          "sha256": "f4a7cd9bf5d2b0f9c64a4dcbbdba82afae2411ec76094f7bf42f25ff3155a8af"
+        },
+        {
+          "bytes": 36674,
+          "path": "references/rsa-attacks-2.md",
+          "sha256": "28571e347fda8765a186629621a10590e0155cde72b0f8964b5ecf0ee55cc633"
+        },
+        {
+          "bytes": 24729,
+          "path": "references/rsa-attacks.md",
+          "sha256": "2b7f5debf51bf25e3f9f3bcb7297d25b3d94172984d607598976d11114340839"
+        },
+        {
+          "bytes": 18182,
+          "path": "references/stream-ciphers.md",
+          "sha256": "5738c55fdf9320b005e6ba2822b11d0b9fa4ef751c032969b5266559552dd055"
+        },
+        {
+          "bytes": 20338,
+          "path": "references/zkp-and-advanced.md",
+          "sha256": "a75350ff2548b769761f9c71bf159a287257ca327ca2b77ce1a8e7aecc4dcfd6"
+        },
+        {
+          "bytes": 40854,
+          "path": "SKILL.md",
+          "sha256": "867adc6d9c5e319fa9b07e15be1dbd7c463477c0b4190c6afdf5d955a14f2508"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "867adc6d9c5e319fa9b07e15be1dbd7c463477c0b4190c6afdf5d955a14f2508",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-forensics": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 295,
+          "path": "agents/openai.yaml",
+          "sha256": "07a9add3063254a3ac80126b33e369c39e2b6e94cf82e7ed0abc8bb9d9b947d8"
+        },
+        {
+          "bytes": 4210,
+          "path": "references/3d-printing.md",
+          "sha256": "692cbb9502427693aab97be70a06cb84b7db7c777e9f37d9554dd9ffa595d3f8"
+        },
+        {
+          "bytes": 21081,
+          "path": "references/disk-advanced.md",
+          "sha256": "eaaf5b3626cb1a82753e524eefad1caba09de282f41fb111b1aa094c270789e5"
+        },
+        {
+          "bytes": 22487,
+          "path": "references/disk-and-memory.md",
+          "sha256": "67156523758208437a8828a248a7db0799fb4323eea4704a19560e47bd0ba2e8"
+        },
+        {
+          "bytes": 31598,
+          "path": "references/disk-recovery.md",
+          "sha256": "d227bbc615d2fd7189ceb68849f546a9177fa8f4524a5aa60ce9a33378cdcd50"
+        },
+        {
+          "bytes": 18983,
+          "path": "references/linux-forensics.md",
+          "sha256": "ecd6108d6fe44dd83530f3d7fed7ccf7d2e5703ae48c4f06fc4e65e43e081798"
+        },
+        {
+          "bytes": 26379,
+          "path": "references/network-advanced.md",
+          "sha256": "de7dd079e6821df37dd80e9b5856c124ec607df4c736c0938a37809087cbd03c"
+        },
+        {
+          "bytes": 30769,
+          "path": "references/network.md",
+          "sha256": "6ef976c3976cadfe43a9d4993fa018a75758776f28d47394d457326734eebe24"
+        },
+        {
+          "bytes": 13654,
+          "path": "references/peripheral-capture.md",
+          "sha256": "e58678d2bb75db1fa8c658360b4e216df4cd8f349442d78d3071fe6ff0db1b1a"
+        },
+        {
+          "bytes": 29146,
+          "path": "references/signals-and-hardware.md",
+          "sha256": "3bb2bcf6346a5bd2ad0d2bce67d22668f8d402f966a25be2016edcb915becd64"
+        },
+        {
+          "bytes": 32060,
+          "path": "references/steganography.md",
+          "sha256": "692cff0ffc317df68a13a3fa82abb11d9d9d8ccb73a78896b7f6cadbed6b99b1"
+        },
+        {
+          "bytes": 20923,
+          "path": "references/stego-advanced-2.md",
+          "sha256": "885ee068e239f2bccfc0642ba7d853730cf8486c754e6d7acd6075bcd01f4537"
+        },
+        {
+          "bytes": 19976,
+          "path": "references/stego-advanced.md",
+          "sha256": "58aaabaf5bf7884012e49a84d7663dafeca1ddbba4fc2ad7010e489079919ae1"
+        },
+        {
+          "bytes": 36764,
+          "path": "references/stego-image.md",
+          "sha256": "f8411f7fe47814f6c760136827be3f82b79d645c262ba61bb048369b1b16f786"
+        },
+        {
+          "bytes": 22479,
+          "path": "references/windows.md",
+          "sha256": "c23e7de4e511aa106059e6e00019ff4f264e1893a78839613ab477fc3cee2ace"
+        },
+        {
+          "bytes": 38715,
+          "path": "SKILL.md",
+          "sha256": "ce72b4528de5f16e866a17b55b6ea047d26c4af592b0e55cf8768d79c8fe4cf5"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "ce72b4528de5f16e866a17b55b6ea047d26c4af592b0e55cf8768d79c8fe4cf5",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-knowledge-base": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 309,
+          "path": "agents/openai.yaml",
+          "sha256": "92989ccdf1148fbc5f33e69add1f97739900fdc5f5eb56b0485cbc6be298aa54"
+        },
+        {
+          "bytes": 3710,
+          "path": "references/archive/exclusions.md",
+          "sha256": "c75cae563119cea2847e20d47408b1d26f2832830457621579bb41c6c79df063"
+        },
+        {
+          "bytes": 2271255,
+          "path": "references/archive/file-manifest.csv",
+          "sha256": "397a8e429d5a862a8f4588bf4b5e34ca32912f56b13527979d442df2afd17ff1"
+        },
+        {
+          "bytes": 3975,
+          "path": "references/archive/known-gaps.md",
+          "sha256": "2e082354494e19435e718392cad2e0061f55340b9d9f8c368e000b451ea46146"
+        },
+        {
+          "bytes": 3351,
+          "path": "references/archive/README.md",
+          "sha256": "8db91365476c1b0c436a14a88146a6375531499e0b7a215d524f914a6ee2f802"
+        },
+        {
+          "bytes": 4087,
+          "path": "references/archive/tool-catalog.md",
+          "sha256": "3a55f18afa517645aa15e984b9b75c390cbb10f972c8a97973d5b12e71dcd4da"
+        },
+        {
+          "bytes": 2223,
+          "path": "references/cases/command-execution.md",
+          "sha256": "3d08a2a3cb688aceb4d3a8a4e3c0e9a784904fedfebdcf0bf7faff052b727280"
+        },
+        {
+          "bytes": 2502,
+          "path": "references/cases/deserialization.md",
+          "sha256": "6f8e3fcf27ca179ba73ebcc50fffa40e4ea689e66999269b94e6e3ca1a6d75d2"
+        },
+        {
+          "bytes": 2226,
+          "path": "references/cases/file-upload.md",
+          "sha256": "6b1de0bf4f33bf88554803937f3926fbf77ad8e779b44b86313626b06b4af2ac"
+        },
+        {
+          "bytes": 2704,
+          "path": "references/cases/index.md",
+          "sha256": "5955c22a8333a31672d6781e6c900e5744030c08d0e366eb69d1cc6c563152a5"
+        },
+        {
+          "bytes": 2291,
+          "path": "references/cases/node-prototype.md",
+          "sha256": "c92af8cf3c18f8bf2e445b17c4085100abe76ce540ea891db50607dea386584a"
+        },
+        {
+          "bytes": 2354,
+          "path": "references/cases/php-features.md",
+          "sha256": "56bef2c23acbaa49ed3fc6e1e4404f62b1e6f140abd32bbd3f81dbfd1760cc84"
+        },
+        {
+          "bytes": 1879,
+          "path": "references/cases/ssti.md",
+          "sha256": "79a0a838b5105e7f2853d71d80c0bdfb91fe2a3298e627b6428aa615d2dc8704"
+        },
+        {
+          "bytes": 5099,
+          "path": "references/index.md",
+          "sha256": "0c63d8fef8e8412020848eb0588005db266e6b52e48f086ed9f2eaa679a2774f"
+        },
+        {
+          "bytes": 3914,
+          "path": "references/misc/archives.md",
+          "sha256": "a121cf2526226f67a95649ceda7f39a38fd8ed77625df60c6e624ea4d268a950"
+        },
+        {
+          "bytes": 3625,
+          "path": "references/misc/audio-stego.md",
+          "sha256": "3073959acf02f0e405695014071383420f67f3fb86cfef42e6142ade5c61a672"
+        },
+        {
+          "bytes": 3988,
+          "path": "references/misc/image-stego.md",
+          "sha256": "ba6a3fc3ff31232b1c345db29a00dd7b11accd4143d3e8a3d45e8bcfd2faf367"
+        },
+        {
+          "bytes": 3581,
+          "path": "references/provenance.md",
+          "sha256": "62d63d59f76aae6553629ce87c6792b2845163d2adccd9e9d16f5e56d5cc628f"
+        },
+        {
+          "bytes": 2417,
+          "path": "references/tools/dirsearch.md",
+          "sha256": "bc249ad6afd28b625baf9d2138e22288b4ce82027ec0c9319247d28ae23fd111"
+        },
+        {
+          "bytes": 2290,
+          "path": "references/tools/ffuf.md",
+          "sha256": "741d77ba5fa1906b7e24ef8972a39c6b40d9bed5a137faea3a042396700a0906"
+        },
+        {
+          "bytes": 3201,
+          "path": "references/tools/packet-analysis.md",
+          "sha256": "c3e64b4141e3b2a802200926f99464b8b8489d299dd14dbed6f73d5490c056fa"
+        },
+        {
+          "bytes": 3219,
+          "path": "references/tools/python-notes.md",
+          "sha256": "92b36caeeb9c7cbfdaadecb3e3f7f7372dfdc663a029fd6dd290e4a3ae28bcdd"
+        },
+        {
+          "bytes": 3150,
+          "path": "references/tools/sqlmap.md",
+          "sha256": "a42aa2a72cc3fe5aacb5a860eba14321194a39e1684a183487cd75ee68fa86ec"
+        },
+        {
+          "bytes": 4147,
+          "path": "references/web/command-execution.md",
+          "sha256": "49b5ac3bb538321f1146adc0e02534efc9a5eaa47c4a8bc6b72be71baa120132"
+        },
+        {
+          "bytes": 3721,
+          "path": "references/web/deserialization.md",
+          "sha256": "a4a38666cda5373d434fe764f2b7ede9dcde37a2039c280f5f6a1543db7bf02e"
+        },
+        {
+          "bytes": 3590,
+          "path": "references/web/file-inclusion.md",
+          "sha256": "2a7e463d8f4a4d5dba946cb23525f740fe5e7d06d04b46395fbebd900b8150fc"
+        },
+        {
+          "bytes": 3682,
+          "path": "references/web/file-upload.md",
+          "sha256": "c60f55a8a534d03fc02a3710786ffa4a26f4d6432991adc485dcfd220659c326"
+        },
+        {
+          "bytes": 4280,
+          "path": "references/web/jwt.md",
+          "sha256": "698a604719f0f8e601aad78f1372d55512d6bc2c2f483c8087ef6c8bad7950c3"
+        },
+        {
+          "bytes": 3494,
+          "path": "references/web/node-prototype.md",
+          "sha256": "2092f5eb4a4bdfa2c86e177f283219566e277b369e23b4c0acd0dd0c9dfe4a05"
+        },
+        {
+          "bytes": 4759,
+          "path": "references/web/php-audit.md",
+          "sha256": "9dc87a1b1e494d29cb165b8067ddafb6923dbb32d06966dda5f13b06147bd072"
+        },
+        {
+          "bytes": 4307,
+          "path": "references/web/sqli.md",
+          "sha256": "089cd6562daf223687eab8d4f7dc14edbe00430ad3ee51c78e387035579bc63b"
+        },
+        {
+          "bytes": 3928,
+          "path": "references/web/ssrf.md",
+          "sha256": "410eaa69dd955327fc13fd653fea49cd1bf360c7dcd5e84e9a154ea3caeb58fd"
+        },
+        {
+          "bytes": 3457,
+          "path": "references/web/ssti.md",
+          "sha256": "c2f32de47cd251caf204fadb4e5e1c3a41a339e265b3cb9fac24e32f1ad4fe49"
+        },
+        {
+          "bytes": 6438,
+          "path": "scripts/search_kb.py",
+          "sha256": "36b2b454033076ba4f6c77632906a2e9e3003d2f91bd645507ee3f0363f0e61c"
+        },
+        {
+          "bytes": 7515,
+          "path": "SKILL.md",
+          "sha256": "2a5bf9e69b4f5eb501a1b7a036ef5f6ea78ebb2bd7fed972f985d3946918354b"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original curated index derived from the maintainer local CTF corpus; raw third-party text, screenshots, binaries, credentials, and unverified redistribution material were excluded. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "2a5bf9e69b4f5eb501a1b7a036ef5f6ea78ebb2bd7fed972f985d3946918354b",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-malware": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 296,
+          "path": "agents/openai.yaml",
+          "sha256": "1c3a77dcd987619ba7ecb9569004914386146ebc776364e335243d8e35eaac0c"
+        },
+        {
+          "bytes": 10734,
+          "path": "references/c2-and-protocols.md",
+          "sha256": "73a5d74a76fbca0bfa8807cfbe18d859ddbad0d3bbdf1203439f06c44869e846"
+        },
+        {
+          "bytes": 6304,
+          "path": "references/pe-and-dotnet.md",
+          "sha256": "2af54d1eeaeb566192e0484fc6db96c322b3e1ad9c2dde836baf2d95c75235e1"
+        },
+        {
+          "bytes": 15792,
+          "path": "references/scripts-and-obfuscation.md",
+          "sha256": "0a45afed5118662d70819fe43886532029d455b6e9fd85b967eb2fa1638701c4"
+        },
+        {
+          "bytes": 9063,
+          "path": "SKILL.md",
+          "sha256": "9f8b3310197633dc811aa0c125df347ca62e82c29a14eb44a62f0344df15e292"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "9f8b3310197633dc811aa0c125df347ca62e82c29a14eb44a62f0344df15e292",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-misc": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 295,
+          "path": "agents/openai.yaml",
+          "sha256": "a727890742d96b2e4a2ca5dd4db016d9a8b6aa3eefea784965032c06ea2eeba9"
+        },
+        {
+          "bytes": 13965,
+          "path": "references/bashjails.md",
+          "sha256": "efd81ae50cbbb82356ec6b09a2920bb5b04e1c7f85dcb0c6787ba7166fdeded8"
+        },
+        {
+          "bytes": 14795,
+          "path": "references/ctfd-navigation.md",
+          "sha256": "04b31fe69a64bd4543b3441160ded9921f6ac55c51931ece38b3f54f6d4eacbf"
+        },
+        {
+          "bytes": 9698,
+          "path": "references/dns.md",
+          "sha256": "04be1c7d9ce7560fb861d3a17b227997c6919614e65101994ef5615d756ba8c4"
+        },
+        {
+          "bytes": 35326,
+          "path": "references/encodings-advanced.md",
+          "sha256": "514bedef5e30d34ccbde428ee6e91903c3116973e00d42ff5014fbbbdb4a548a"
+        },
+        {
+          "bytes": 15648,
+          "path": "references/encodings.md",
+          "sha256": "2760294a53707fdea189889e4e7bf72390f57f30b06eb7b67ab6758ec91476c0"
+        },
+        {
+          "bytes": 20587,
+          "path": "references/field-notes.md",
+          "sha256": "67c641067e142394cc58810e03d819af5fe5ff654d4277e41ef48e1935ff22ad"
+        },
+        {
+          "bytes": 10490,
+          "path": "references/games-and-vms-2.md",
+          "sha256": "8385e9aceee18ff6bbc5162d6367b3c0c0860fc2a9fd0ee98823422338f3d89f"
+        },
+        {
+          "bytes": 32422,
+          "path": "references/games-and-vms-3.md",
+          "sha256": "6fae422c05f61430012504bf741efdf82ab6d43c809df6d2bb6f23064a6970f0"
+        },
+        {
+          "bytes": 11507,
+          "path": "references/games-and-vms-4.md",
+          "sha256": "6b00e0245720aa2fe77c5388fc5e1bc69f5cf65e1878124f1c52432a176f1667"
+        },
+        {
+          "bytes": 21089,
+          "path": "references/games-and-vms.md",
+          "sha256": "7b1275b0d6fdfa0482b9e086011466d537c1cc14ecaef3ceebefbf18a3238f7e"
+        },
+        {
+          "bytes": 18452,
+          "path": "references/linux-privesc.md",
+          "sha256": "d7550c94cd9330cd052f947dea15c65bb29dfe3dbd01fcfb52b44e1a3035b83e"
+        },
+        {
+          "bytes": 24826,
+          "path": "references/pyjails.md",
+          "sha256": "f60562ced2385ca98eae120b377913a11258a6053c50bbf1bf15da588ce7ce20"
+        },
+        {
+          "bytes": 3994,
+          "path": "references/rf-sdr.md",
+          "sha256": "ea61aa6d6eeba16923b6482df80c43ace8352179854ce4292b9246853af5bc04"
+        },
+        {
+          "bytes": 6818,
+          "path": "SKILL.md",
+          "sha256": "60bbb5a1ef19b529e1f710d7feebe13d633d5ff0312dfa2bb382f50090365de9"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed field notes into a directly linked references/field-notes.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "60bbb5a1ef19b529e1f710d7feebe13d633d5ff0312dfa2bb382f50090365de9",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-osint": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 283,
+          "path": "agents/openai.yaml",
+          "sha256": "b606253a3e73dc7c435d0ea5c98a65c0230b4a6afb75e42ad61c0585b7b8bb30"
+        },
+        {
+          "bytes": 22796,
+          "path": "references/geolocation-and-media.md",
+          "sha256": "506ac15a6f395f50b5919db213cc8208ddc63513a8b225c9adadb937393e499a"
+        },
+        {
+          "bytes": 13907,
+          "path": "references/social-media.md",
+          "sha256": "6a927f3ea21899517642d79bb5067ebb810b3561c321efa642fc495fb375024a"
+        },
+        {
+          "bytes": 14443,
+          "path": "references/web-and-dns.md",
+          "sha256": "9c33b7a0988d184d070ee6add4416a0ef87cee4e27489b4fb6be2bd5f09191cf"
+        },
+        {
+          "bytes": 10232,
+          "path": "SKILL.md",
+          "sha256": "ce34cd8ad41533195a6edecdf19fb0577ad5ecd9df3f5530aa25c73e867b0309"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "ce34cd8ad41533195a6edecdf19fb0577ad5ecd9df3f5530aa25c73e867b0309",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-pwn": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 292,
+          "path": "agents/openai.yaml",
+          "sha256": "84f8e107a86cd1c2d12e4dcc5bd31a8f2c5086621130bb575a6a2c61fc8dabd9"
+        },
+        {
+          "bytes": 30287,
+          "path": "references/advanced-exploits-2.md",
+          "sha256": "dcc7b0e171fd1ee60a49fc8563e6d0096bbe93cda4199ec5ff29e3fd7e433678"
+        },
+        {
+          "bytes": 33233,
+          "path": "references/advanced-exploits-3.md",
+          "sha256": "11a9e9605b0dacbd135ae448aa6b7f9d0cadb2ea21ee31286583653036bd5e9f"
+        },
+        {
+          "bytes": 31220,
+          "path": "references/advanced-exploits-4.md",
+          "sha256": "b34fe2112584bb226dcbe9f8768e5ac6286e259860bf5647c2ce2a0464877b20"
+        },
+        {
+          "bytes": 6299,
+          "path": "references/advanced-exploits-5.md",
+          "sha256": "21c3ebb813546ba7f3c12745a050ec4eed2c3960225c2f8869a921c2408f8157"
+        },
+        {
+          "bytes": 35842,
+          "path": "references/advanced-exploits.md",
+          "sha256": "d1648e5ebc287fc5c8e935d457e8152ddbcc05218604aeb2572f62ee5f5e6418"
+        },
+        {
+          "bytes": 14632,
+          "path": "references/advanced.md",
+          "sha256": "b41a065e598c8f6cc3e3643cd0926f9ca5623a4133a2b1222bb54629ab0b2d57"
+        },
+        {
+          "bytes": 47881,
+          "path": "references/field-notes.md",
+          "sha256": "a428a38718bb7a20daec00a59dbe65ad7ce22e2d5ffa6243e35d3d366df7c0a2"
+        },
+        {
+          "bytes": 33125,
+          "path": "references/format-string.md",
+          "sha256": "d01c7fe4096a3a8f40471cb6a83a054f9bc774ce2e547129de2d801a103b5340"
+        },
+        {
+          "bytes": 15196,
+          "path": "references/heap-fsop.md",
+          "sha256": "3829f27798df4bdf980e07b717d6e16531f46096ce6f26e1c559ff2e48b61a85"
+        },
+        {
+          "bytes": 20250,
+          "path": "references/heap-techniques-2.md",
+          "sha256": "0e9c09e5f1e8304ee3de14f4da70aa5550d8aaa12ef1bb5987191df723f3fc7e"
+        },
+        {
+          "bytes": 24914,
+          "path": "references/heap-techniques.md",
+          "sha256": "e293a071365f6df9e3efd134d677894eca91ced24fdba339b90c3e9b406dec05"
+        },
+        {
+          "bytes": 15323,
+          "path": "references/kernel-bypass.md",
+          "sha256": "64e0dad07ea8bbf7256518e8fdebb043741001a2f2f2347640c3cca5d8cc9e21"
+        },
+        {
+          "bytes": 19058,
+          "path": "references/kernel-techniques.md",
+          "sha256": "529888d72ae93658bb4882140f9db996a11f2fab8ba178855071af38d62a100d"
+        },
+        {
+          "bytes": 28705,
+          "path": "references/kernel.md",
+          "sha256": "ab93bf97401a7e34c83260efbf87af0e14b0bae748cff5e99320f8682a0e35c1"
+        },
+        {
+          "bytes": 26827,
+          "path": "references/overflow-basics.md",
+          "sha256": "536e95a1331287a7a5a8c827050d70eeb5d5701fa66067505bb1316e6045baa5"
+        },
+        {
+          "bytes": 32963,
+          "path": "references/rop-advanced.md",
+          "sha256": "94a9fc58efd23eb10ddec849229944f4980c29c8b07de4b6775cac657e345029"
+        },
+        {
+          "bytes": 28793,
+          "path": "references/rop-and-shellcode.md",
+          "sha256": "5432159f5364a14161c1d8a8a0a594d7b65071108918ccd273634be66e310f1c"
+        },
+        {
+          "bytes": 17713,
+          "path": "references/sandbox-escape.md",
+          "sha256": "1e83116ca252410622b407fb729485c182712a9658b8fb9f09a966fb5f180573"
+        },
+        {
+          "bytes": 19972,
+          "path": "SKILL.md",
+          "sha256": "bca224c1a18b7efa9187eca43d72f71b3dd2708b56386864953b46f4f3cfce62"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "bca224c1a18b7efa9187eca43d72f71b3dd2708b56386864953b46f4f3cfce62",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-reverse": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 283,
+          "path": "agents/openai.yaml",
+          "sha256": "8199ecbccbd0348058f07380d6a4fa7e1921ef70fefab0d6e1d673c3f6dc5ccd"
+        },
+        {
+          "bytes": 10960,
+          "path": "references/anti-analysis-ctf.md",
+          "sha256": "1b8f4b24247241268c8f843e72d4aac70e5f69eab80d739f2ce0acff4a1e16e4"
+        },
+        {
+          "bytes": 23895,
+          "path": "references/anti-analysis.md",
+          "sha256": "4eab16808b8b10f1407fac1e04bddbd990ed6760da8b28b5c91e2b071b0f421c"
+        },
+        {
+          "bytes": 32839,
+          "path": "references/field-notes.md",
+          "sha256": "01fdd40b97072276680cc21b97270432a64dfe2bd2149af5f5f84c53a8b2853c"
+        },
+        {
+          "bytes": 27266,
+          "path": "references/languages-compiled.md",
+          "sha256": "c610232349dbc7a0ab250c94defad84495a8a4c02891103d9a5f96e7edd76d95"
+        },
+        {
+          "bytes": 33397,
+          "path": "references/languages-platforms.md",
+          "sha256": "bb24c7f08855a6ac77a53b3bb943d6205427a69a75d60c43d9741c2a891decfb"
+        },
+        {
+          "bytes": 23472,
+          "path": "references/languages.md",
+          "sha256": "c84578fb1d72a223286052dd6d911a7008088e799865ebf4a17bbf858e952b1a"
+        },
+        {
+          "bytes": 19331,
+          "path": "references/patterns-ctf-2.md",
+          "sha256": "62075e46d4ff62f691f7ee2a92f7ad39abfc253e406cda7556ed9541c4346b13"
+        },
+        {
+          "bytes": 38814,
+          "path": "references/patterns-ctf-3.md",
+          "sha256": "c7994b951c06328aee9e4bf1de51a9bfac9711da4aec1a488800a04ccba0483e"
+        },
+        {
+          "bytes": 49350,
+          "path": "references/patterns-ctf.md",
+          "sha256": "9dad92c0a77eb5cbc90170a894ef010a649f0fb1718231d29a2475bcb09777f1"
+        },
+        {
+          "bytes": 12282,
+          "path": "references/patterns-runtime.md",
+          "sha256": "c90855af6f744e0d9cd934ca59fdaaad4d4a728b3682f2b5ec06a6d405698888"
+        },
+        {
+          "bytes": 20391,
+          "path": "references/patterns.md",
+          "sha256": "6a1ae58001ab5fc47a46bc212963cad6172456da10aa0f96b6ae4ceaa12a135a"
+        },
+        {
+          "bytes": 16241,
+          "path": "references/platforms-hardware.md",
+          "sha256": "6b8ea29e7817306248c1bfb0afee934ff801ca0ae34787b743270f9d26f5ffd7"
+        },
+        {
+          "bytes": 25072,
+          "path": "references/platforms.md",
+          "sha256": "f564299fb0a92c3509bc801948c6cbac6bfa586bfa0fe0cb2aa2f47a2bab12ff"
+        },
+        {
+          "bytes": 14831,
+          "path": "references/tools-advanced-2.md",
+          "sha256": "9591b73ee600447350e5cbd7c1707d2c4a12d6706c7cb4c9587ff9614f77ec70"
+        },
+        {
+          "bytes": 12377,
+          "path": "references/tools-advanced.md",
+          "sha256": "ec0eb40d4f510317051babee9882a2949b3b4616495a67365f1abcbccbe2b81d"
+        },
+        {
+          "bytes": 24250,
+          "path": "references/tools-dynamic.md",
+          "sha256": "9c05c317c243aa0c5d8e99e5890f8bbf25c5e380a07837108be56b65306508e3"
+        },
+        {
+          "bytes": 12989,
+          "path": "references/tools-emulation.md",
+          "sha256": "3668acdf7f74668f73bf62a4889396bb496753ee376280fc4e156a76304f3cbd"
+        },
+        {
+          "bytes": 15893,
+          "path": "references/tools.md",
+          "sha256": "706839b87519a06a11bd5306dbcbbb10a8904500b7bbd7ce31bc9a8d2f8f6d2a"
+        },
+        {
+          "bytes": 13476,
+          "path": "SKILL.md",
+          "sha256": "df97b6f4a61160ba6c9abc1992042823a68597505fc9363e00e4a62e5a731165"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "df97b6f4a61160ba6c9abc1992042823a68597505fc9363e00e4a62e5a731165",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-web": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 273,
+          "path": "agents/openai.yaml",
+          "sha256": "dbe9b7b7e4fd3386d16f1bfb9f5c1202a156355ab5a1bb9bb2f154d8381d2c17"
+        },
+        {
+          "bytes": 5206,
+          "path": "references/auth-and-access-2.md",
+          "sha256": "8b7863eb5a0d446dcffbeeb2274f6843ac1be93458ac8c00870e846649925c54"
+        },
+        {
+          "bytes": 40553,
+          "path": "references/auth-and-access.md",
+          "sha256": "1f276707b092485f7dce1a18d0b6764ac8c902bdd0943d8e2166cf1dcd3c00ad"
+        },
+        {
+          "bytes": 14567,
+          "path": "references/auth-infra.md",
+          "sha256": "a7b6d32f56ece3676d4bad4729e3ef8670c8843e1884558db42c110b74e104f0"
+        },
+        {
+          "bytes": 11112,
+          "path": "references/auth-jwt.md",
+          "sha256": "0289e77a4528f3b7eb0d271947d48ae9571bd3349087f133ca2542a222c7b3fd"
+        },
+        {
+          "bytes": 37895,
+          "path": "references/client-side-advanced.md",
+          "sha256": "d6dc8885a8d4aa436e1d07a44438df0744c7c119ffe7ea2c46e4246c9e94d479"
+        },
+        {
+          "bytes": 26039,
+          "path": "references/client-side.md",
+          "sha256": "28cd8d5b5a34fb39473ff27bafb192c6ba5a9c8d7c631ba2d5fd0d2e4e6849b6"
+        },
+        {
+          "bytes": 3855,
+          "path": "references/cves.md",
+          "sha256": "aeefcb525627e927d291647c143bc4ab0ff205b33b7432a5feed546552291d3d"
+        },
+        {
+          "bytes": 36057,
+          "path": "references/field-notes.md",
+          "sha256": "eb54b56435e861f2dddd71c359dd7cb18fac1927b9f029324068739c4e4a6205"
+        },
+        {
+          "bytes": 8986,
+          "path": "references/node-and-prototype.md",
+          "sha256": "fc370925116fca1a797cebf5d0bf19073c42d3fb8ea24ebabe40650a61c826c0"
+        },
+        {
+          "bytes": 19188,
+          "path": "references/server-side-2.md",
+          "sha256": "8b2a11ed60705da47f5e09c7b20f69f6092f6d78adfe2724f6d45d2bae86fbce"
+        },
+        {
+          "bytes": 26299,
+          "path": "references/server-side-advanced-2.md",
+          "sha256": "ca3e8c45c361985d3965683a656cc4ab9dcad9d20aa96deb5f2ee07e95a3b385"
+        },
+        {
+          "bytes": 7103,
+          "path": "references/server-side-advanced-3.md",
+          "sha256": "dec1782de46c22ab5da3c37aba789de9dd5c261ada9e44fbb2b89f521b54dc2c"
+        },
+        {
+          "bytes": 22262,
+          "path": "references/server-side-advanced-4.md",
+          "sha256": "0b17a9eb3ac9ea1fa4d9c8f3837a1d3e70c8d2158a4313b17ece6e090db67404"
+        },
+        {
+          "bytes": 16192,
+          "path": "references/server-side-advanced.md",
+          "sha256": "77461e9641644e19ac9af99be3ceedeaaedf058637f32df395ab07a1406c07f6"
+        },
+        {
+          "bytes": 27327,
+          "path": "references/server-side-deser.md",
+          "sha256": "6a8fb1091b15f5c536c5468624d4ec8ef5a409701faa9bddc34529b47f2424d7"
+        },
+        {
+          "bytes": 39564,
+          "path": "references/server-side-exec-2.md",
+          "sha256": "c03c5b96c0eb03d193782fc07ff0cfd794f3700b2505ac306de19e4bcaf978eb"
+        },
+        {
+          "bytes": 28718,
+          "path": "references/server-side-exec.md",
+          "sha256": "b91a42274ed24dc3c84fd0309ed1520d05e3d40e0dac92ff21afe21f6f70b821"
+        },
+        {
+          "bytes": 6890,
+          "path": "references/server-side.md",
+          "sha256": "7f96d26113e4091c69953bc5c41c7c0cae08ccb3a23e71cc5fbebcb25cb6b130"
+        },
+        {
+          "bytes": 41335,
+          "path": "references/sql-injection.md",
+          "sha256": "b0098660287714c1819248c78c83bb5c6e4f5cdb651c144e67a2943e0a40da45"
+        },
+        {
+          "bytes": 15865,
+          "path": "references/web3.md",
+          "sha256": "243de8155a91b1486a20372232b22d42194f14a6664c98c9c48cef58d7cf91a0"
+        },
+        {
+          "bytes": 11293,
+          "path": "SKILL.md",
+          "sha256": "bb6ac1627c25f0dc576f80defcb250184301015219a1e07192c057b66968a561"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "bb6ac1627c25f0dc576f80defcb250184301015219a1e07192c057b66968a561",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ctf-writeup": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 277,
+          "path": "agents/openai.yaml",
+          "sha256": "3e95fe3180422533bb250d0c3ba33c007a779ec3b8e027b0bc3b0473c2332400"
+        },
+        {
+          "bytes": 5383,
+          "path": "SKILL.md",
+          "sha256": "a97228b2eb53f652285da1a675b426ba629b06bc7b4cc7f2ca1af46b3d129e45"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "a97228b2eb53f652285da1a675b426ba629b06bc7b4cc7f2ca1af46b3d129e45",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "ethical-hacking-methodology": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 316,
+          "path": "agents/openai.yaml",
+          "sha256": "42702abd2aad9c2e525d8b7b3bf10fda4b5e8124a0c3c2b76cb38c7fa6fa7080"
+        },
+        {
+          "bytes": 12393,
+          "path": "SKILL.md",
+          "sha256": "85ba14dca6e1a07b160cda2585557669086f4a6b1bd421a6d63953cb2cef50a2"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "85ba14dca6e1a07b160cda2585557669086f4a6b1bd421a6d63953cb2cef50a2",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/ethical-hacking-methodology/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/ethical-hacking-methodology/SKILL.md"
+    },
+    "file-path-traversal": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 302,
+          "path": "agents/openai.yaml",
+          "sha256": "1b392e6488ae5375990c215079a30e3508f3f43a82eaa0f29df327a439979e7e"
+        },
+        {
+          "bytes": 10175,
+          "path": "references/playbook.md",
+          "sha256": "c3fabb97354dda57eeaef73c3d3407a836e3ff6530ad97061fe5607ab91eb651"
+        },
+        {
+          "bytes": 3748,
+          "path": "SKILL.md",
+          "sha256": "873c48d3b128c1aee7316bd81465c1458a57e0b5c8e43a7f70e7bf5b82192a3e"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "873c48d3b128c1aee7316bd81465c1458a57e0b5c8e43a7f70e7bf5b82192a3e",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/file-path-traversal/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/file-path-traversal/SKILL.md"
+    },
+    "html-injection-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 313,
+          "path": "agents/openai.yaml",
+          "sha256": "408e5d25b317cc3f3f67271de251218ccc822b5267049f0869a8fc3e470be15a"
+        },
+        {
+          "bytes": 11403,
+          "path": "references/playbook.md",
+          "sha256": "ccca2b2feb07b816aabf4acd6f831e7db0c1ea91127809021a61cce63fd9b175"
+        },
+        {
+          "bytes": 3804,
+          "path": "SKILL.md",
+          "sha256": "1b472c31a2023ac2aece0da6da7fb570046827bedd2d23d47cb9119eea1f9b21"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "1b472c31a2023ac2aece0da6da7fb570046827bedd2d23d47cb9119eea1f9b21",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/html-injection-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/html-injection-testing/SKILL.md"
+    },
+    "idor-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 296,
+          "path": "agents/openai.yaml",
+          "sha256": "c0288d78023e2de8538a2d2ad1b62641ff151748a0adfa2523f08480a043df72"
+        },
+        {
+          "bytes": 13986,
+          "path": "SKILL.md",
+          "sha256": "9e98f0056802822981b3a31d83571db502d5ecb0451143552131714f81775b28"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "9e98f0056802822981b3a31d83571db502d5ecb0451143552131714f81775b28",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/idor-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/idor-testing/SKILL.md"
+    },
+    "linux-privilege-escalation": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 305,
+          "path": "agents/openai.yaml",
+          "sha256": "8bf2a65cb7fbedb85a288d2ada0f0b0531832b83ff52ef87f235bcc53704ba8d"
+        },
+        {
+          "bytes": 9042,
+          "path": "references/playbook.md",
+          "sha256": "e9435af25c7b54e9ac3b39010e5ceb7fd91ad3506e8c142d58fe604af83910fa"
+        },
+        {
+          "bytes": 4757,
+          "path": "SKILL.md",
+          "sha256": "2d51a90232d6a170c29bc46defb97c8c87b99baec767a8592394cc6b6439c433"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "2d51a90232d6a170c29bc46defb97c8c87b99baec767a8592394cc6b6439c433",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/linux-privilege-escalation/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/linux-privilege-escalation/SKILL.md"
+    },
+    "metasploit-framework": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 293,
+          "path": "agents/openai.yaml",
+          "sha256": "0953e1aff62d4bc8f6d3cd68ab5e30280f715c3baba2fa9d7465ace8d8f0bbcc"
+        },
+        {
+          "bytes": 10956,
+          "path": "references/playbook.md",
+          "sha256": "5e6a7686aa4bb54f5dc9ffc0900f38a495f94e973c2dca31427b1be7ae0ad8d4"
+        },
+        {
+          "bytes": 4847,
+          "path": "SKILL.md",
+          "sha256": "5d1a1fcd578d5998d546f7570bbee6eed16f34054c48d4ff22cf0c8a70db612d"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "5d1a1fcd578d5998d546f7570bbee6eed16f34054c48d4ff22cf0c8a70db612d",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/metasploit-framework/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/metasploit-framework/SKILL.md"
+    },
+    "pentest-checklist": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 292,
+          "path": "agents/openai.yaml",
+          "sha256": "dbee95c10fbe851feb5d3177c97bdd3df59dfd69b2452454cb86eacfdd4573cc"
+        },
+        {
+          "bytes": 11665,
+          "path": "SKILL.md",
+          "sha256": "ffa148ad4a48122a7099c73d8cffb0dd5798623058cf523dd993ffe21f742cf4"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "ffa148ad4a48122a7099c73d8cffb0dd5798623058cf523dd993ffe21f742cf4",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/pentest-checklist/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/pentest-checklist/SKILL.md"
+    },
+    "pentest-commands": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 317,
+          "path": "agents/openai.yaml",
+          "sha256": "e935f7a334e532d37cf069cfdf6f088b4b00a3569fa44bc1ec34872d7e586dab"
+        },
+        {
+          "bytes": 10886,
+          "path": "SKILL.md",
+          "sha256": "fe9e78581a3ccc7158699a3270e10dfd47a95679c9d04080d2d8f8c817641d7a"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "fe9e78581a3ccc7158699a3270e10dfd47a95679c9d04080d2d8f8c817641d7a",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/pentest-commands/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/pentest-commands/SKILL.md"
+    },
+    "privilege-escalation-methods": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 336,
+          "path": "agents/openai.yaml",
+          "sha256": "b736a961e97bd3637b3bf500a4baa2aad5a3c34c7d4528b7a3b12adc30eb6cf4"
+        },
+        {
+          "bytes": 9603,
+          "path": "SKILL.md",
+          "sha256": "878543c8842d5f1722efbfb96e41540572f65ebd8a64f491bafc0b5d08ad59ad"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "878543c8842d5f1722efbfb96e41540572f65ebd8a64f491bafc0b5d08ad59ad",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/privilege-escalation-methods/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/privilege-escalation-methods/SKILL.md"
+    },
+    "red-team-tools": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 266,
+          "path": "agents/openai.yaml",
+          "sha256": "5295d3370caad10e28c63318cc5100244a845c143d59a92d98197f3d78e9b27d"
+        },
+        {
+          "bytes": 9278,
+          "path": "SKILL.md",
+          "sha256": "5dc117d7a470734e983a1f09a7b2a8d6df2e75516d52291a2d7ddc55104852fb"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "5dc117d7a470734e983a1f09a7b2a8d6df2e75516d52291a2d7ddc55104852fb",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/red-team-tools/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/red-team-tools/SKILL.md"
+    },
+    "scanning-tools": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 279,
+          "path": "agents/openai.yaml",
+          "sha256": "0fa3060e13cd5a47de2a5b6bb91ee3e60689fcc0e55fa8b853a6573655d53a6b"
+        },
+        {
+          "bytes": 11136,
+          "path": "references/assessment-playbook.md",
+          "sha256": "ae4f75b75aad9a6ea079220e67737c1205c18a424d5b867c3799df6b39ad1329"
+        },
+        {
+          "bytes": 7322,
+          "path": "SKILL.md",
+          "sha256": "6f51f5b4d5785a3fc591e330829cad6e6a490ce29d946ae5a3b1aded9b1c8711"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the detailed multi-tool command catalog and scanning methodology into a directly linked reference and condensed the entrypoint into scope, pilot, validation, evidence, and reporting guidance.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "6f51f5b4d5785a3fc591e330829cad6e6a490ce29d946ae5a3b1aded9b1c8711",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/scanning-tools/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/scanning-tools/SKILL.md"
+    },
+    "semgrep-rule-creator": {
+      "author": "Trail of Bits",
+      "files": [
+        {
+          "bytes": 283,
+          "path": "agents/openai.yaml",
+          "sha256": "13d32569eff9d861a56e757e595a0aa18c61cb934ee9498f41da84a940925e52"
+        },
+        {
+          "bytes": 5648,
+          "path": "references/quick-reference.md",
+          "sha256": "3e87f6e87b7cab07578037c6db1fb7d7cb57be03bbccc793c043720a8c3a435e"
+        },
+        {
+          "bytes": 7725,
+          "path": "references/workflow.md",
+          "sha256": "3dab347aa2e2c78b5a7a94ebb0d73d92dcb5c7df87d60ea9ee8f2671eba1c7b9"
+        },
+        {
+          "bytes": 8302,
+          "path": "SKILL.md",
+          "sha256": "9085bee21f30fc0206c2c6ca04e817fb7bfcea2f608b7dde38f873f188dd0109"
+        }
+      ],
+      "license": "CC-BY-SA-4.0",
+      "license_evidence": "licenses/trailofbits-skills-CC-BY-SA-4.0.txt",
+      "license_evidence_sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "license_status": "verified",
+      "modifications": "Adapted for BaoanSkills; normalized frontmatter and formatting, preserved or added an authorization boundary, and reorganized metadata. Core skill content remains derived from the upstream version. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Localized the pinned upstream quick-reference and workflow support documents under references/ and rewrote entrypoint links to their shipped paths.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "9085bee21f30fc0206c2c6ca04e817fb7bfcea2f608b7dde38f873f188dd0109",
+      "source": "https://github.com/trailofbits/skills/blob/149d7b21f4067765b82e67029730b42d228ef4b4/plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+      "source_repo": "https://github.com/trailofbits/skills",
+      "upstream_commit": "149d7b21f4067765b82e67029730b42d228ef4b4",
+      "upstream_path": "plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md"
+    },
+    "shodan-reconnaissance": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 297,
+          "path": "agents/openai.yaml",
+          "sha256": "5bfe97fcecc991457139fca9f8ce9b984dbbee5d80d4d2f60ab9fe5bd610e7b2"
+        },
+        {
+          "bytes": 11648,
+          "path": "references/playbook.md",
+          "sha256": "722ac3e5099e8cf15b9d05f5b50b5842863df78c8cc8d5c79d9e5deda254a641"
+        },
+        {
+          "bytes": 4176,
+          "path": "SKILL.md",
+          "sha256": "8523c790bf6936420c0564dd59b9b6fbee906071a690318e541002b0a9f246b5"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "8523c790bf6936420c0564dd59b9b6fbee906071a690318e541002b0a9f246b5",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/shodan-reconnaissance/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/shodan-reconnaissance/SKILL.md"
+    },
+    "smtp-penetration-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 324,
+          "path": "agents/openai.yaml",
+          "sha256": "97848bf436d0d0719cc3e4763ee60182d271762de0b10000addc4350cfb84095"
+        },
+        {
+          "bytes": 9434,
+          "path": "references/playbook.md",
+          "sha256": "cf06cd8a03347fdf1b0d5745429f4150a49435e21b4e0c949da4617a72c934f2"
+        },
+        {
+          "bytes": 4800,
+          "path": "SKILL.md",
+          "sha256": "c9815ea8cdd15ac7d46bf679956eeab3f14ebc4bf2d28fd6616c0304c29908b9"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "c9815ea8cdd15ac7d46bf679956eeab3f14ebc4bf2d28fd6616c0304c29908b9",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/smtp-penetration-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/smtp-penetration-testing/SKILL.md"
+    },
+    "solve-challenge": {
+      "author": "BaoanSkills contributors",
+      "files": [
+        {
+          "bytes": 295,
+          "path": "agents/openai.yaml",
+          "sha256": "ae7968a77d526014b10a118b998313c473544d516f2c23c2d774aa502242444e"
+        },
+        {
+          "bytes": 4235,
+          "path": "scripts/install_ctf_tools.sh",
+          "sha256": "71371d189dce7ca28285faec6433ac1dcbd7750478766fa04e5b68ecd3d162ea"
+        },
+        {
+          "bytes": 9324,
+          "path": "SKILL.md",
+          "sha256": "3fdeab3bdbeb1acf0d8e78c81d29b3b72eda640a7afed14d94492cda08b7b9fc"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "LICENSE",
+      "license_evidence_sha256": "3bff62447c8abb73e3597f6d3967d19073e312df2440f44fa14b94dba8d126f0",
+      "license_status": "verified",
+      "modifications": "Original BaoanSkills content; metadata normalized; authorization boundary preserved or added for public release. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "3fdeab3bdbeb1acf0d8e78c81d29b3b72eda640a7afed14d94492cda08b7b9fc",
+      "source": "original",
+      "source_repo": "",
+      "upstream_commit": "",
+      "upstream_path": ""
+    },
+    "sql-injection-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 322,
+          "path": "agents/openai.yaml",
+          "sha256": "a57ad7ce402ddad060d5d5273a3cc292ce724585f12fc55958b3cc0682199e7b"
+        },
+        {
+          "bytes": 12817,
+          "path": "SKILL.md",
+          "sha256": "349f0767570e02a3b81676580cf612109b97d93cb6f0ab1723236fa6acd12898"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "349f0767570e02a3b81676580cf612109b97d93cb6f0ab1723236fa6acd12898",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/sql-injection-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/sql-injection-testing/SKILL.md"
+    },
+    "sqlmap-database-pentesting": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 305,
+          "path": "agents/openai.yaml",
+          "sha256": "7754fbbf3020ffc3e4e8b108358b0dbf05639a09efff9b53eb112f9d4a775a63"
+        },
+        {
+          "bytes": 13403,
+          "path": "SKILL.md",
+          "sha256": "8f7fcfd9780880969c77ff6bc49fb5dcada60033f1fffb388fd7d0811e834ebc"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "8f7fcfd9780880969c77ff6bc49fb5dcada60033f1fffb388fd7d0811e834ebc",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/sqlmap-database-pentesting/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/sqlmap-database-pentesting/SKILL.md"
+    },
+    "ssh-penetration-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 317,
+          "path": "agents/openai.yaml",
+          "sha256": "7680940add1833c52e39062ad48937feff451727bf6a9d782357271d242a65a3"
+        },
+        {
+          "bytes": 10346,
+          "path": "references/playbook.md",
+          "sha256": "1e1befbd2c518f5c27d37c6c2ca9bd5672aa54f9aa23ed4e8b62a61d9fd436a4"
+        },
+        {
+          "bytes": 3655,
+          "path": "SKILL.md",
+          "sha256": "9e64df2a43f33acb0663e00dd488b820831734bad9874b2c4793a01d4d9be88f"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "9e64df2a43f33acb0663e00dd488b820831734bad9874b2c4793a01d4d9be88f",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/ssh-penetration-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/ssh-penetration-testing/SKILL.md"
+    },
+    "top-web-vulnerabilities": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 314,
+          "path": "agents/openai.yaml",
+          "sha256": "06070e90473a15f33fc8c87f8f69b9435a2eb531c1b6d7b7c320884b8cba2935"
+        },
+        {
+          "bytes": 3350,
+          "path": "references/assessment-tables.md",
+          "sha256": "272e11481e6dcba4c35344577bff15f9ee0691093381cd10100aef8d59ce25c1"
+        },
+        {
+          "bytes": 19225,
+          "path": "references/vulnerability-catalog.md",
+          "sha256": "9ddb80dbcde713c037a22742350a42a21cae25fef5a87551571961cc8b9bcb27"
+        },
+        {
+          "bytes": 5780,
+          "path": "SKILL.md",
+          "sha256": "41af5f94ebffe01c61ce6b1375ba1f98a3f9819adffab36bdd5222a2c6f635b5"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the full vulnerability taxonomy and supporting assessment tables into directly linked references and turned the entrypoint into a concise taxonomy-selection, delegation, evidence, and stop-condition router.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "41af5f94ebffe01c61ce6b1375ba1f98a3f9819adffab36bdd5222a2c6f635b5",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/top-web-vulnerabilities/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/top-web-vulnerabilities/SKILL.md"
+    },
+    "windows-privilege-escalation": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 313,
+          "path": "agents/openai.yaml",
+          "sha256": "db2c60f7635dc85447b4887da980b04e3e50e1896d401dfd1bfd4ebbaba3099b"
+        },
+        {
+          "bytes": 12236,
+          "path": "references/playbook.md",
+          "sha256": "5a31634165d497930cda8b15f26250074de499dd6ed4199fca7713ee96d16298"
+        },
+        {
+          "bytes": 4205,
+          "path": "SKILL.md",
+          "sha256": "9cfbb980276ce78e1c4945e378cb0cb6cd8625374e11f7c8a0caf1e57fffdeff"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "9cfbb980276ce78e1c4945e378cb0cb6cd8625374e11f7c8a0caf1e57fffdeff",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/windows-privilege-escalation/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/windows-privilege-escalation/SKILL.md"
+    },
+    "wireshark-analysis": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 304,
+          "path": "agents/openai.yaml",
+          "sha256": "a0b08500c4888e39bc80566e886c32b843537abe6eed967859597fb4f032a98a"
+        },
+        {
+          "bytes": 10014,
+          "path": "references/playbook.md",
+          "sha256": "69c76f4a31f61881fc81674f5d3cf0294e09dfd22302af0ee5a70459360cd18e"
+        },
+        {
+          "bytes": 4148,
+          "path": "SKILL.md",
+          "sha256": "45f9d5bf37e4180f9dc5cc2a45ce6a54a8016c8906b7d2087bba9a5a6cfce65c"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "45f9d5bf37e4180f9dc5cc2a45ce6a54a8016c8906b7d2087bba9a5a6cfce65c",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/wireshark-analysis/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/wireshark-analysis/SKILL.md"
+    },
+    "wordpress-penetration-testing": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 344,
+          "path": "agents/openai.yaml",
+          "sha256": "c29a25bb70d0e877f2fe4cefd2470fca11aa9d0759f11f2b46878b4eb8806f6d"
+        },
+        {
+          "bytes": 9461,
+          "path": "references/assessment-playbook.md",
+          "sha256": "7fe18a2252c3b0d56330802750582c01a06677b088a1338c0673fb815b916a15"
+        },
+        {
+          "bytes": 2470,
+          "path": "references/wordpress-7-security.md",
+          "sha256": "5c3a586296c1bb5bed34c569b8047ab26ed05596c1a89f48101d3b4dd8bddcc2"
+        },
+        {
+          "bytes": 8958,
+          "path": "SKILL.md",
+          "sha256": "e87a421bb8d79a7e99647ee6795d4f902806b84a703345b3c5e2fda2fd39941f"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the long enumeration and controlled validation commands into a directly linked assessment playbook, moved WordPress 7.0 endpoint checks into a second linked reference, and condensed the entrypoint into scope, validation, reporting, and stop-condition guidance.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "e87a421bb8d79a7e99647ee6795d4f902806b84a703345b3c5e2fda2fd39941f",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/wordpress-penetration-testing/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/wordpress-penetration-testing/SKILL.md"
+    },
+    "xss-html-injection": {
+      "author": "zebbern",
+      "files": [
+        {
+          "bytes": 302,
+          "path": "agents/openai.yaml",
+          "sha256": "08353896e0c863cdcc23f0cc505febb0496173582d5d436484d6c380957ba567"
+        },
+        {
+          "bytes": 10737,
+          "path": "references/playbook.md",
+          "sha256": "f9d4a6c0f1de640d5ff49a3220ebdb2dcdbaa11af07ed975e24498b6bdf5e411"
+        },
+        {
+          "bytes": 4498,
+          "path": "SKILL.md",
+          "sha256": "eab731bf71b1ab66d1d3038ba11ab457f7048ab95a216294e73ca84a20f0708c"
+        }
+      ],
+      "license": "MIT",
+      "license_evidence": "licenses/zebbern-claude-code-guide-MIT.txt",
+      "license_evidence_sha256": "e78d4947c2ac989e529647b98c53c9638722609a17c0024b226d578cb65ec57c",
+      "license_status": "verified",
+      "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Reorganized detailed workflow, quick reference, examples, and troubleshooting into a directly linked references/playbook.md.",
+      "provenance_status": "verified",
+      "retrieved_at": "2026-11-22",
+      "skill_md_sha256": "eab731bf71b1ab66d1d3038ba11ab457f7048ab95a216294e73ca84a20f0708c",
+      "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/xss-html-injection/SKILL.md",
+      "source_repo": "https://github.com/zebbern/claude-code-guide",
+      "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
+      "upstream_path": "skills/xss-html-injection/SKILL.md"
+    }
+  }
+}

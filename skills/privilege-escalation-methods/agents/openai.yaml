@@ -1,0 +1,6 @@
+interface:
+  display_name: Privilege Escalation Methods
+  short_description: Compare Linux and Windows privilege escalation techniques.
+  default_prompt: Use $privilege-escalation-methods to compare and prioritize privilege escalation paths on this explicitly authorized Linux or Windows host.
+policy:
+  allow_implicit_invocation: true

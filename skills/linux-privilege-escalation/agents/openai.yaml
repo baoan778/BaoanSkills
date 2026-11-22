@@ -1,0 +1,6 @@
+interface:
+  display_name: Linux Privilege Escalation
+  short_description: Enumerate and exploit Linux privilege escalation paths.
+  default_prompt: Use $linux-privilege-escalation to enumerate privilege escalation paths on this explicitly authorized Linux host.
+policy:
+  allow_implicit_invocation: true

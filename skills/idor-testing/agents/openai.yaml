@@ -1,0 +1,6 @@
+interface:
+  display_name: IDOR Testing
+  short_description: Find broken object-level authorization and IDOR flaws.
+  default_prompt: Use $idor-testing to test this explicitly authorized web or API surface for IDOR and broken object-level authorization.
+policy:
+  allow_implicit_invocation: true

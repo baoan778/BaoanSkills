@@ -1,0 +1,30 @@
+name: Skill request
+description: Propose a new skill or a substantial expansion.
+title: "[Skill]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: use_case
+    attributes:
+      label: Authorized use case
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and non-goals
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and licensing
+      description: List planned source material, authors, and licenses.
+    validations:
+      required: true
+  - type: textarea
+    id: routing
+    attributes:
+      label: Existing overlap
+      description: Which existing skills overlap, and why is a new skill needed?

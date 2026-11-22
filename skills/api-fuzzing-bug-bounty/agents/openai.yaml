@@ -1,0 +1,6 @@
+interface:
+  display_name: API Fuzzing Bug Bounty
+  short_description: Test REST, SOAP, and GraphQL APIs for security flaws.
+  default_prompt: Use $api-fuzzing-bug-bounty to assess this explicitly authorized API target for security flaws with the API fuzzing workflow.
+policy:
+  allow_implicit_invocation: true

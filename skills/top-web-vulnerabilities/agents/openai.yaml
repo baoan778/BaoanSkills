@@ -1,0 +1,6 @@
+interface:
+  display_name: Top Web Vulnerabilities
+  short_description: Map common web vulnerabilities to impact and remediation.
+  default_prompt: Use $top-web-vulnerabilities to triage these authorized web findings against common vulnerability and remediation guidance.
+policy:
+  allow_implicit_invocation: true

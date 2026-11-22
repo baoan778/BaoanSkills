@@ -1,0 +1,59 @@
+minimum_pre_commit_version: "4.7.0"
+repos:
+  - repo: local
+    hooks:
+      - id: workflow-pins
+        name: pinned GitHub Actions
+        entry: python scripts/check_workflows.py
+        language: system
+        pass_filenames: false
+      - id: whitespace
+        name: whitespace and EOF
+        entry: python scripts/check_whitespace.py
+        language: system
+        pass_filenames: false
+      - id: encoding
+        name: UTF-8 encoding
+        entry: python scripts/check_encoding.py
+        language: system
+        pass_filenames: false
+      - id: markdown-structure
+        name: Markdown structure
+        entry: python scripts/check_markdown_structure.py
+        language: system
+        pass_filenames: false
+      - id: local-links
+        name: local links
+        entry: python scripts/check_links.py
+        language: system
+        pass_filenames: false
+      - id: resources
+        name: referenced resources
+        entry: python scripts/check_resources.py
+        language: system
+        pass_filenames: false
+      - id: skill-layout
+        name: skill layout and reachability
+        entry: python scripts/check_skill_layout.py
+        language: system
+        pass_filenames: false
+      - id: skill-quality
+        name: skill quality catalog
+        entry: python scripts/apply_skill_quality.py --check
+        language: system
+        pass_filenames: false
+      - id: agent-metadata
+        name: agent UI metadata
+        entry: python scripts/generate_agent_metadata.py --check
+        language: system
+        pass_filenames: false
+      - id: ruff
+        name: Ruff
+        entry: python -m ruff check scripts tests
+        language: system
+        pass_filenames: false
+      - id: pytest
+        name: pytest
+        entry: python -m pytest -q
+        language: system
+        pass_filenames: false
