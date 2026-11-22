@@ -40,7 +40,8 @@ local corpus paths, sizes, and hashes.
   tools, display names, short descriptions, and default prompts.
 - Pre-commit configuration and CI coverage for Linux and Windows across Python
   3.10, 3.11, and 3.12, plus CodeQL, Dependabot, gitleaks, and tagged-release
-  automation.
+  automation. Pinned `pre-commit` 4.6.2 because 4.7.0 requires Python 3.11 and
+  would break the supported Python 3.10 matrix.
 
 ### Changed
 
