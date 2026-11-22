@@ -17,11 +17,11 @@ def family_for(name: str) -> str:
         return "SRC and bounty workflows"
     if any(token in name for token in ("aws", "azure", "gcp", "cloud", "k8s", "container", "active-directory", "mtls", "ssh-penetration", "privilege-escalation")):
         return "Cloud, identity, and infrastructure"
-    if any(token in name for token in ("reverse", "forensic", "malware", "firmware", "binary", "gdb", "wireshark", "memory-", "protocol-", "anti-reversing", "constant-time", "zeroize", "js-reverse")):
+    if any(token in name for token in ("reverse", "forensic", "malware", "firmware", "binary", "gdb", "memory-", "protocol-", "anti-reversing", "constant-time", "zeroize", "js-reverse")):
         return "Reverse engineering, forensics, and malware"
     if any(token in name for token in ("compliance", "privacy", "gdpr", "pci", "security-requirement", "security-career", "security-bluebook", "threat-", "attack-tree", "stride-")):
         return "Threat modeling, compliance, and governance"
-    if any(token in name for token in ("ffuf", "burp", "semgrep", "metasploit", "shodan", "scanning", "vulnerability-scanner", "supply-chain", "protect-mcp", "sast", "secrets-management")):
+    if any(token in name for token in ("ffuf", "burp", "semgrep", "metasploit", "shodan", "scanning", "wireshark", "vulnerability-scanner", "supply-chain", "protect-mcp", "sast", "secrets-management")):
         return "Tools, scanning, and supply chain"
     if name in {"007", "audit-skills", "langgpt", "combat-learning-value-refiner", "adhx", "aegisops-ai", "cred-omega"}:
         return "Meta-skills and umbrella workflows"

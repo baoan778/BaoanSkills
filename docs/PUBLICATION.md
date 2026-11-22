@@ -114,25 +114,13 @@ the lock to hide a source change.
 Use the normal checks in the staging checkout:
 
 ```bash
-python -m pytest
-python -m ruff check scripts tests
-python scripts/validate_skills.py --strict
-python scripts/check_whitespace.py
-python scripts/check_encoding.py
-python scripts/build_kb_manifest.py --check
-python scripts/check_publication.py --check
-python scripts/check_workflows.py
-python scripts/check_links.py
-python scripts/check_markdown_structure.py
-python scripts/check_resources.py
-python scripts/check_skill_layout.py
-python scripts/smoke_test_scripts.py
-python scripts/apply_skill_quality.py --check
-python scripts/generate_agent_metadata.py --check
-python scripts/build_index.py --check
-python scripts/build_provenance.py --check
-python scripts/check_release_readiness.py --strict
+python scripts/check_all.py
 ```
+
+The aggregate checker runs every release-scoped stage used by CI, including
+publication and provenance drift checks. Use individual commands from
+[`.github/workflows/validate.yml`](../.github/workflows/validate.yml) when
+debugging a specific failure.
 
 When the raw `CTF本地知识库` corpus is present, `build_kb_manifest.py --check`
 regenerates the manifest and compares every path, size, and hash. In CI or a

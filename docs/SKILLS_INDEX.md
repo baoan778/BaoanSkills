@@ -51,13 +51,7 @@
 | [ssh-penetration-testing](../skills/ssh-penetration-testing/SKILL.md) | offensive | MIT | Assess explicitly authorized SSH services for weak configuration, credential exposure, authentication issues, tunneling paths, and post-access risk. |
 | [windows-privilege-escalation](../skills/windows-privilege-escalation/SKILL.md) | high | MIT | Enumerate and validate Windows privilege escalation paths on explicitly authorized hosts, covering tokens, services, scheduled tasks, ACLs, credentials, and local misconfigurations. |
 
-## Reverse engineering, forensics, and malware (1)
-
-| Skill | Risk | License | Description |
-|---|---|---|---|
-| [wireshark-analysis](../skills/wireshark-analysis/SKILL.md) | offensive | MIT | Analyze packet captures with Wireshark and tshark for explicitly authorized investigations, including protocol filtering, traffic reconstruction, credential exposure, and evidence capture. |
-
-## Tools, scanning, and supply chain (5)
+## Tools, scanning, and supply chain (6)
 
 | Skill | Risk | License | Description |
 |---|---|---|---|
@@ -66,3 +60,4 @@
 | [scanning-tools](../skills/scanning-tools/SKILL.md) | offensive | MIT | Choose and operate network, web, wireless, and vulnerability scanners for explicitly authorized assessments, including scope controls, safe defaults, result validation, and evidence capture. |
 | [semgrep-rule-creator](../skills/semgrep-rule-creator/SKILL.md) | safe | CC-BY-SA-4.0 | Create, test, and refine custom Semgrep rules for security vulnerabilities and bug patterns in source code. Use for static-analysis detection work, not live target exploitation. |
 | [shodan-reconnaissance](../skills/shodan-reconnaissance/SKILL.md) | offensive | MIT | Use Shodan to map an explicitly authorized organization's internet exposure, identify services and versions, and pivot into validated reconnaissance without treating search results as permission to test. |
+| [wireshark-analysis](../skills/wireshark-analysis/SKILL.md) | offensive | MIT | Analyze packet captures with Wireshark and tshark for explicitly authorized investigations, including protocol filtering, traffic reconstruction, credential exposure, and evidence capture. |

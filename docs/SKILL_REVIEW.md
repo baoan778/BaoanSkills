@@ -93,11 +93,7 @@ Run the complete development suite from the repository root:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python -m pytest
-python scripts/build_kb_manifest.py --check
-python scripts/check_resources.py
-python scripts/check_skill_layout.py
-python scripts/check_release_readiness.py --strict
+python scripts/check_all.py
 ```
 
 A maintainer should also inspect the rendered Markdown and scan for routing

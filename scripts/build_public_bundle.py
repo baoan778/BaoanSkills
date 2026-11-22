@@ -22,6 +22,7 @@ TOP_LEVEL_FILES = (
     "LICENSE",
     "NOTICE",
     "README.md",
+    "README.zh-CN.md",
     "SECURITY.md",
     "pyproject.toml",
     "requirements-dev.txt",

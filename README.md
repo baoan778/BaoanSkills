@@ -1,254 +1,277 @@
-# BaoanSkills
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="BaoanSkills: 39 provenance-verified security skills" width="100%">
+</p>
 
-[![Validate](https://github.com/baoan778/BaoanSkills/actions/workflows/validate.yml/badge.svg)](https://github.com/baoan778/BaoanSkills/actions/workflows/validate.yml)
-[![CodeQL](https://github.com/baoan778/BaoanSkills/actions/workflows/codeql.yml/badge.svg)](https://github.com/baoan778/BaoanSkills/actions/workflows/codeql.yml)
-[![License: MIT + CC BY-SA 4.0](https://img.shields.io/badge/license-MIT%20%2B%20CC--BY--SA%204.0-blue.svg)](NOTICE)
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="docs/INSTALL.md">Install guide</a> ·
+  <a href="docs/SKILLS_INDEX.md">Skill catalog</a> ·
+  <a href="docs/ROUTING.md">Routing guide</a> ·
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="README.zh-CN.md">简体中文</a>
+</p>
 
-A provenance-aware collection of 39 security skills for Codex-compatible
-agents. The public release covers CTF solving, authorized application security
-testing, privilege assessment, and security auditing tooling.
+<p align="center">
+  <a href="https://github.com/baoan778/BaoanSkills/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/baoan778/BaoanSkills?display_name=tag&sort=semver"></a>
+  <a href="https://github.com/baoan778/BaoanSkills/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/baoan778/BaoanSkills/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="https://github.com/baoan778/BaoanSkills/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/baoan778/BaoanSkills/actions/workflows/codeql.yml/badge.svg"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white">
+  <a href="NOTICE"><img alt="License: MIT + CC BY-SA 4.0" src="https://img.shields.io/badge/license-MIT%20%2B%20CC--BY--SA%204.0-blue.svg"></a>
+</p>
 
+<p align="center">
+  <strong>Give your coding agent a disciplined security playbook.</strong><br>
+  Focused workflows, on-demand references, and explicit authorization boundaries.
+</p>
+
+A provenance-aware collection of 39 security skills for Codex-compatible agents.
+The public release covers CTF solving, authorized application security testing,
+privilege assessment, and security auditing tooling.
+
+> [!IMPORTANT]
 > **Authorized use only.** Use these skills only in CTF environments, owned labs,
-> or systems for which you have explicit written permission. See
-> [docs/AUTHORIZATION.md](docs/AUTHORIZATION.md), [SECURITY.md](SECURITY.md), and the
-> authorization section in every `SKILL.md`.
+> or systems for which you have explicit written permission. A public target, a
+> discovered service, or the presence of a tool is never authorization. Read
+> [docs/AUTHORIZATION.md](docs/AUTHORIZATION.md) before active testing.
 
-## Install
+## Why BaoanSkills
 
-The installer copies only skills on the reviewed public allowlist and has no
-runtime dependencies beyond Python 3.10+. Before copying, it verifies every
-requested skill file against `release/provenance.lock.json`. A missing or invalid
-lock, an unlocked or missing file, a symlink, or a size/hash mismatch aborts
-installation without copying anything.
+| Common problem | BaoanSkills approach |
+|---|---|
+| Giant prompts bury the actual workflow | A focused `SKILL.md` entrypoint routes to detailed references only when needed |
+| Agent output varies between sessions | Explicit evidence, stop conditions, and output criteria make runs reproducible |
+| Offensive tooling is easy to misuse | Every skill starts with an authorization boundary and scope-aware execution rules |
+| Third-party content is hard to trust | Pinned sources, license evidence, per-file SHA-256 locks, and fail-closed installation |
+| Installing everything adds noise | Dependency-free installer supports individual skills, starter bundles, or the full catalog |
 
-Normal installation does not import PyYAML; that dependency is only needed by
-maintainer tooling that parses skill frontmatter.
+## Quick start
+
+**Requirements:** Python 3.10+, Git, and Codex or another agent that discovers
+`SKILL.md` directories.
+
+### macOS / Linux
 
 ```bash
 git clone https://github.com/baoan778/BaoanSkills.git
 cd BaoanSkills
 python3 scripts/install_skills.py --list
-python3 scripts/install_skills.py ctf-web ctf-crypto
+python3 scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 ```
 
-Windows PowerShell:
+### Windows PowerShell
 
 ```powershell
 git clone https://github.com/baoan778/BaoanSkills.git
 Set-Location BaoanSkills
 python scripts\install_skills.py --list
-python scripts\install_skills.py ctf-web ctf-crypto
+python scripts\install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 ```
 
-Install every public skill:
+Restart or reload your agent after installation. The default destination is
+`$CODEX_HOME/skills` when `CODEX_HOME` is set, otherwise `~/.codex/skills`.
+Use `--dest PATH` for another location and `--force` to update existing skills.
 
-```bash
-python3 scripts/install_skills.py --all
+[Release archives](https://github.com/baoan778/BaoanSkills/releases/latest),
+checksum verification, update steps, and troubleshooting are documented in the
+**[installation guide](docs/INSTALL.md)**.
+
+### Choose a starter bundle
+
+| Goal | Install command |
+|---|---|
+| CTF fundamentals | `python scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-forensics ctf-reverse ctf-pwn ctf-writeup` |
+| Authorized web testing | `python scripts/install_skills.py ethical-hacking-methodology top-web-vulnerabilities sql-injection-testing xss-html-injection idor-testing pentest-checklist` |
+| Cloud and host review | `python scripts/install_skills.py aws-penetration-testing linux-privilege-escalation windows-privilege-escalation ssh-penetration-testing` |
+| Code and CI audit | `python scripts/install_skills.py agentic-actions-auditor semgrep-rule-creator burpsuite-project-parser` |
+| Everything | `python scripts/install_skills.py --all` |
+
+Use `python3` instead of `python` on macOS or Linux when required.
+
+## Find the right skill
+
+| You are working on | Start with | When to branch |
+|---|---|---|
+| An unfamiliar CTF bundle | `solve-challenge` | Route to the narrowest specialist after triage |
+| RSA, ECC, ciphers, or PRNGs | `ctf-crypto` | Use `ctf-misc` only when crypto is incidental |
+| Native binary exploitation | `ctf-pwn` | Use `ctf-reverse` first when the main blocker is understanding the binary |
+| Reverse engineering | `ctf-reverse` | Move to `ctf-pwn` once exploitation is the primary task |
+| A CTF web application | `ctf-web` | Use AppSec skills only for authorized professional assessments |
+| Disk, memory, network, or signal artifacts | `ctf-forensics` | Use `wireshark-analysis` for a standalone authorized PCAP review |
+| A solved challenge that needs documentation | `ctf-writeup` | Pair with the specialist skill that produced the evidence |
+| An authorized web application | `top-web-vulnerabilities` | Specialize by vulnerability class once evidence is clear |
+| An authorized API or bug-bounty scope | `api-fuzzing-bug-bounty` | Add authentication, IDOR, or injection skills as the scope requires |
+| An AWS, Linux, or Windows environment | `aws-penetration-testing`, `linux-privilege-escalation`, or `windows-privilege-escalation` | Confirm written scope before any active or mutating action |
+| GitHub Actions that invoke AI agents | `agentic-actions-auditor` | Use `semgrep-rule-creator` when a reusable static check is needed |
+| A local CTF knowledge lookup | `ctf-knowledge-base` | Route the actual solve to the matching specialist |
+
+The complete routing rules and overlap guidance live in
+[docs/ROUTING.md](docs/ROUTING.md).
+
+## Skill catalog
+
+<details>
+<summary><strong>CTF · 12 skills</strong></summary>
+
+`ctf-ai-ml` · `ctf-crypto` · `ctf-forensics` · `ctf-knowledge-base` · `ctf-malware` ·
+`ctf-misc` · `ctf-osint` · `ctf-pwn` · `ctf-reverse` · `ctf-web` · `ctf-writeup` ·
+`solve-challenge`
+
+</details>
+
+<details>
+<summary><strong>Application security and code review · 16 skills</strong></summary>
+
+`agentic-actions-auditor` · `api-fuzzing-bug-bounty` · `broken-authentication` ·
+`ethical-hacking-methodology` · `file-path-traversal` · `html-injection-testing` ·
+`idor-testing` · `pentest-checklist` · `pentest-commands` · `red-team-tools` ·
+`smtp-penetration-testing` · `sql-injection-testing` · `sqlmap-database-pentesting` ·
+`top-web-vulnerabilities` · `wordpress-penetration-testing` · `xss-html-injection`
+
+</details>
+
+<details>
+<summary><strong>Cloud, identity, and infrastructure · 5 skills</strong></summary>
+
+`aws-penetration-testing` · `linux-privilege-escalation` ·
+`privilege-escalation-methods` · `ssh-penetration-testing` ·
+`windows-privilege-escalation`
+
+</details>
+
+<details>
+<summary><strong>Tools, scanning, and supply chain · 6 skills</strong></summary>
+
+`burpsuite-project-parser` · `metasploit-framework` · `scanning-tools` ·
+`semgrep-rule-creator` · `shodan-reconnaissance` · `wireshark-analysis`
+
+</details>
+
+Browse descriptions, risk levels, licenses, and direct links in the generated
+**[skill catalog](docs/SKILLS_INDEX.md)**.
+
+## How a skill is used
+
+```mermaid
+flowchart LR
+    A["Task + scope"] --> B["Agent selects\nthe narrowest skill"]
+    B --> C["SKILL.md\nrouting + guardrails"]
+    C --> D["References and scripts\nloaded on demand"]
+    D --> E["Reproducible result"]
+    A -. "authorization check" .-> C
+
+    classDef task fill:#0d263b,stroke:#58a6ff,color:#e2e8f0
+    classDef skill fill:#123a3a,stroke:#38e8c4,color:#e2e8f0
+    classDef result fill:#3b2c18,stroke:#f4b860,color:#fff7e6
+    class A,B task
+    class C,D skill
+    class E result
 ```
 
-The default destination is `$CODEX_HOME/skills` when `CODEX_HOME` is set,
-otherwise `~/.codex/skills`. Choose another directory with `--dest PATH`,
-preview with `--dry-run`, and update existing installations with `--force`.
-Restart or reload Codex after installation so it discovers the new skills. To
-install manually, copy complete skill directories; do not copy only `SKILL.md`.
+Each skill uses **progressive disclosure**:
 
-### Release archive
+- frontmatter gives the agent a concise discovery description;
+- `SKILL.md` contains the routing decision, authorization boundary, core workflow,
+  and output criteria;
+- `references/` and `scripts/` carry detailed material that is loaded only when
+  the current task needs it.
 
-Prebuilt archives are attached to each [GitHub Release](https://github.com/baoan778/BaoanSkills/releases)
-with a matching SHA-256 file. Each tagged release is smoke-tested in CI before
-publication, including checksum verification, zip extraction, a sample install,
-and a tamper-rejection check. Use the `.zip` archive on Windows and the
-`.tar.gz` archive on macOS or Linux.
+This keeps context focused while preserving the depth needed for real work.
 
-```powershell
-# After downloading baoanskills-release.zip and its .sha256 file:
-$expected = (Get-Content .\baoanskills-release.zip.sha256 -Raw).Split()[0]
-$actual = (Get-FileHash .\baoanskills-release.zip -Algorithm SHA256).Hash.ToLower()
-if ($actual -ne $expected) { throw 'Archive checksum mismatch' }
-Expand-Archive .\baoanskills-release.zip -DestinationPath .
-Set-Location .\baoanskills-public
-python scripts\install_skills.py --all
+## Example prompts
+
+```text
+Use the ctf-crypto skill to analyze the attached RSA challenge and produce a
+reproducible solve path with the recovered flag.
 ```
 
-The archive contains a validated `baoanskills-public` snapshot, including the
-installer, tests, provenance reports, and only allowlisted skills.
+```text
+Use the idor-testing skill to review the API endpoints in ./lab-scope.json.
+The written scope and test window are in ./AUTHORIZATION.md. Stop before any
+request outside that scope.
+```
 
-## What is included
+```text
+Use agentic-actions-auditor to review the AI-agent workflows under
+.github/workflows for prompt-injection and secret-exposure risks.
+```
 
-The authoritative release list is
-[release/public-skills.txt](release/public-skills.txt). The matching file-level
-SHA-256 lock is [release/provenance.lock.json](release/provenance.lock.json).
+```text
+Use semgrep-rule-creator to turn this vulnerable code pattern into a tested
+Semgrep rule with positive and negative fixtures.
+```
 
-| Group | Count | License | Origin |
+## Provenance and quality
+
+The release allowlist is [release/public-skills.txt](release/public-skills.txt).
+Every published skill file is locked by SHA-256 in
+[release/provenance.lock.json](release/provenance.lock.json).
+
+| Origin | Skills | License | Source |
 |---|---:|---|---|
 | Original CTF workflows | 12 | MIT | BaoanSkills contributors |
 | Authorized security testing | 24 | MIT | `zebbern/claude-code-guide` at a pinned commit |
 | Security auditing tools | 3 | CC BY-SA 4.0 | `trailofbits/skills` at a pinned commit |
 
-Capabilities:
+Additional guarantees:
 
-- **CTF:** AI/ML, crypto, forensics, malware, misc, OSINT, pwn, reverse
-  engineering, web exploitation, writeups, a curated knowledge-base/corpus
-  index, and a first-pass challenge router.
-- **Application security:** SQL injection, XSS/HTML injection, authentication,
-  IDOR, path traversal, WordPress, and broad web vulnerability workflows.
-- **Infrastructure:** AWS, Linux and Windows privilege escalation, SSH, SMTP,
-  Shodan reconnaissance, Wireshark analysis, Metasploit, and scanner selection.
-- **Auditing:** GitHub agentic-actions review, Burp project parsing, and Semgrep
-  rule creation.
+- the installer verifies requested files before copying and aborts on any
+  missing, extra, symlinked, or hash-mismatched file;
+- release archives include SHA-256 checksum files and are smoke-tested before
+  publication;
+- CI validates Linux and Windows across Python 3.10, 3.11, and 3.12;
+- CodeQL, gitleaks, link checks, resource checks, Markdown checks, provenance
+  checks, and release-readiness checks are required quality gates.
 
-Each skill follows this layout. Topic documents live under `references/` so the
-entrypoint stays focused and context loading remains predictable.
+Read [docs/PROVENANCE.md](docs/PROVENANCE.md) and
+[docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md) for the review model.
 
-```text
-<skill-name>/
-├── SKILL.md
-├── agents/openai.yaml
-├── references/        # optional
-├── scripts/           # optional
-└── assets/            # optional
-```
-
-## Routing and discovery
-
-Start with [docs/ROUTING.md](docs/ROUTING.md) when choosing between overlapping
-skills. Prefer explicit platform, vulnerability, or tool signals over broad
-methodology skills. The generated catalog is
-[docs/SKILLS_INDEX.md](docs/SKILLS_INDEX.md); provenance details are in
-[docs/PROVENANCE.md](docs/PROVENANCE.md) and
-[docs/provenance.csv](docs/provenance.csv).
-
-When a workflow requires active testing, establish scope and explicit
-authorization first. CTF-specific web skills are not a substitute for a
-professional assessment workflow and reporting process.
-
-## Repository layout
+## Repository map
 
 ```text
-.github/       CI, CodeQL, release automation, and contribution templates
-docs/          architecture, routing, publication, provenance, and review guides
-licenses/      complete upstream license evidence
-release/       public allowlist and file-level provenance lock
-scripts/       validation, generation, installation, and snapshot tooling
-skills/        allowlisted skill directories only in the public snapshot
-tests/         regression tests for metadata, routing, installation, and layout
+skills/     focused SKILL.md entrypoints, references, scripts, and assets
+docs/       installation, routing, authorization, provenance, and review guides
+release/    public allowlist and per-file SHA-256 provenance lock
+scripts/    installer, generators, validators, and release tooling
+tests/      regression coverage for metadata, routing, layout, and packaging
+.github/    CI, CodeQL, release automation, and contribution templates
 ```
 
 ## Development
 
-Install the development dependencies, enable the local hooks, and run the test
-suite:
-
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 -m pre_commit install
-python3 -m pytest
+python3 scripts/check_all.py
 ```
 
-Core validation commands:
+`check_all.py` runs the same release-scoped quality suite used by CI. See
+[CONTRIBUTING.md](CONTRIBUTING.md) before changing skills, routing metadata,
+generated files, or the provenance lock.
 
-```bash
-python3 -m ruff check scripts tests
-python3 scripts/validate_skills.py --strict
-python3 scripts/build_kb_manifest.py --check
-python3 scripts/check_publication.py --check
-python3 scripts/check_workflows.py
-python3 scripts/check_links.py
-python3 scripts/check_whitespace.py
-python3 scripts/check_markdown_structure.py
-python3 scripts/check_resources.py
-python3 scripts/check_skill_layout.py
-python3 scripts/check_encoding.py
-python3 scripts/smoke_test_scripts.py
-python3 scripts/apply_skill_quality.py --check
-python3 scripts/generate_agent_metadata.py --check
-python3 scripts/build_index.py --check
-python3 scripts/build_provenance.py --check
-python3 scripts/check_release_readiness.py --strict
-```
+## Security
 
-On Windows, replace `python3` with `python`. Validate the full local staging
-inventory, including non-public material, with
-`python scripts/validate_skills.py --all`.
-
-When changing discovery text, UI metadata, risk, tags, or allowed tools, update
-[scripts/skill_quality.py](scripts/skill_quality.py), then run:
-
-```bash
-python3 scripts/apply_skill_quality.py --write
-python3 scripts/generate_agent_metadata.py --write
-```
-
-After content changes, regenerate the lock and reports before release:
-
-```bash
-python3 scripts/check_publication.py --write
-python3 scripts/build_index.py --write
-python3 scripts/build_provenance.py --write
-```
-
-`check_publication.py --write` regenerates the release lock. Do not edit the lock
-by hand; a checked-in lock must match the published files exactly.
-
-## Quality gates
-
-The validation workflow runs on Linux and Windows with Python 3.10, 3.11, and
-3.12. It checks:
-
-- frontmatter, license evidence, provenance, and the public allowlist;
-- reviewed discovery metadata, route coverage, and UI presentation;
-- local links, referenced files, skill layout, and reference reachability;
-- Markdown structure, UTF-8 encoding, whitespace, and shell/Python smoke tests;
-- Python lint, regression tests, generated-report drift, the canonical
-  knowledge-base manifest, and release readiness;
-- immutable GitHub Actions pinning, CodeQL, gitleaks, and a clean snapshot build.
-
-See [docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md) for the maintainer review rubric.
-
-## Public snapshot
-
-This repository publishes a clean snapshot, not the broad local staging
-checkout. Additional unverified material may exist in a maintainer's staging
-repository; it is excluded by both the allowlist and `skills/.gitignore`.
-
-Build and validate the publishable snapshot with:
-
-```bash
-python3 scripts/build_public_bundle.py --output ../baoanskills-public
-```
-
-The builder copies only allowlisted skills and governance files, includes the
-tests and development configuration, regenerates the index and provenance
-reports, and runs exclusive release checks. `ctf-knowledge-base` publishes
-original cards, search tooling, a tool catalog, and a path/hash manifest; the raw
-`CTF本地知识库` corpus and risky attachments remain local. Never publish the
-staging checkout directly. See [docs/PUBLICATION.md](docs/PUBLICATION.md) and
-[docs/RELEASE.md](docs/RELEASE.md).
+Do not open a public issue containing live credentials, private target data, or
+unpatched vulnerability details. Follow [SECURITY.md](SECURITY.md) for private
+reporting and disclosure guidance.
 
 ## License
 
-- Repository scaffolding, scripts, documentation, and the 12 original CTF
-  skills use the root [MIT License](LICENSE).
-- The 24 skills derived from `zebbern/claude-code-guide` are MIT-licensed; the
-  upstream notice is in
-  [licenses/zebbern-claude-code-guide-MIT.txt](licenses/zebbern-claude-code-guide-MIT.txt).
-- The 3 skills derived from `trailofbits/skills` are CC BY-SA 4.0. Attribution
-  and the full license are preserved in [NOTICE](NOTICE) and
-  [licenses/trailofbits-skills-CC-BY-SA-4.0.txt](licenses/trailofbits-skills-CC-BY-SA-4.0.txt).
-  Adapted material in those skill directories must remain under CC BY-SA 4.0.
+Repository scaffolding, scripts, documentation, and the 12 original CTF skills
+use the root [MIT License](LICENSE). The 24 skills derived from
+`zebbern/claude-code-guide` are MIT-licensed. The 3 skills derived from
+`trailofbits/skills` are CC BY-SA 4.0. Attribution and full license texts are in
+[NOTICE](NOTICE) and [licenses/](licenses/).
 
 The root MIT License does not relicense third-party material. `source: original`
 records the maintainer's attribution for the 12 CTF skills; no external
 historical record was available to independently prove that status.
 
-## Contributing and security
+## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md),
-[docs/ADDING_A_SKILL.md](docs/ADDING_A_SKILL.md),
-[docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md),
-[docs/PUBLICATION.md](docs/PUBLICATION.md), and
-[docs/ROUTING.md](docs/ROUTING.md). Every public skill requires verified source,
-license, evidence, authorization boundaries, and a matching lock entry.
+Contributions are welcome when they preserve provenance, licensing, routing
+quality, and the authorization boundary. Start with
+[CONTRIBUTING.md](CONTRIBUTING.md),
+[docs/ADDING_A_SKILL.md](docs/ADDING_A_SKILL.md), and
+[docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md).
 
-Do not open a public issue containing live credentials, private target data, or
-unpatched vulnerability details. Follow [SECURITY.md](SECURITY.md).
+Maintained by [@baoan778](https://github.com/baoan778).

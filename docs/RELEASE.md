@@ -25,25 +25,10 @@ Install the development dependencies and run the source checks first:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python -m pytest
-python -m ruff check scripts tests
-python scripts/validate_skills.py --strict
-python scripts/check_whitespace.py
-python scripts/check_encoding.py
-python scripts/build_kb_manifest.py --check
-python scripts/check_publication.py --check
-python scripts/check_workflows.py
-python scripts/check_links.py
-python scripts/check_markdown_structure.py
-python scripts/check_resources.py
-python scripts/check_skill_layout.py
-python scripts/smoke_test_scripts.py
-python scripts/apply_skill_quality.py --check
-python scripts/generate_agent_metadata.py --check
-python scripts/build_index.py --check
-python scripts/build_provenance.py --check
-python scripts/check_release_readiness.py --strict
+python scripts/check_all.py
 ```
+
+The aggregate checker runs the release-scoped validation stages used by CI.
 
 Build a fresh snapshot:
 

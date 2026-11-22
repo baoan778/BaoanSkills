@@ -41,3 +41,25 @@ def test_readme_origin_group_counts_match_metadata() -> None:
         "Authorized security testing": origin_counts["Authorized security testing"],
         "Security auditing tools": origin_counts["Security auditing tools"],
     }
+ZH_README = (ROOT / "README.zh-CN.md").read_text(encoding="utf-8")
+BANNER = ROOT / "docs" / "assets" / "banner.svg"
+INSTALL_GUIDE = ROOT / "docs" / "INSTALL.md"
+INSTALL_COMMAND_RE = re.compile(r"python(?:3)? scripts[/\\]install_skills\.py ([^`\n]+)")
+
+
+def test_readme_assets_and_install_guide_exist() -> None:
+    assert BANNER.is_file()
+    assert INSTALL_GUIDE.is_file()
+    assert "39" in ZH_README
+    assert "docs/assets/banner.svg" in README
+    assert "docs/assets/banner.svg" in ZH_README
+
+
+def test_readme_starter_bundles_use_public_skills_only() -> None:
+    available = set(publication_names() or [])
+    for document in (README, ZH_README):
+        for match in INSTALL_COMMAND_RE.finditer(document):
+            for token in match.group(1).split():
+                if token.startswith("-"):
+                    continue
+                assert token in available, f"{token!r} is not in the public allowlist"

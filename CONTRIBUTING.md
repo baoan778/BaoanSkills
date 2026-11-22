@@ -158,28 +158,18 @@ another lock update.
 
 ## Validation
 
-Run the complete staging suite:
+Run the canonical release-scoped suite from the repository root:
 
 ```bash
-python -m pytest
-python -m ruff check scripts tests
-python scripts/validate_skills.py --strict
-python scripts/build_kb_manifest.py --check
-python scripts/check_publication.py --check
-python scripts/check_workflows.py
-python scripts/check_links.py
-python scripts/check_whitespace.py
-python scripts/check_markdown_structure.py
-python scripts/check_resources.py
-python scripts/check_skill_layout.py
-python scripts/check_encoding.py
-python scripts/smoke_test_scripts.py
-python scripts/apply_skill_quality.py --check
-python scripts/generate_agent_metadata.py --check
-python scripts/build_index.py --check
-python scripts/build_provenance.py --check
-python scripts/check_release_readiness.py --strict
+python -m pip install -r requirements-dev.txt
+python scripts/check_all.py
 ```
+
+`check_all.py` runs compilation, Ruff, pytest, provenance and publication
+checks, generated-file drift checks, Markdown/link/resource/layout checks, smoke
+tests, workflow pinning, and release readiness. The same stages are visible in
+[`.github/workflows/validate.yml`](.github/workflows/validate.yml). Run an
+individual command from that workflow when you need to debug one failure.
 
 To inventory every local staging skill, use:
 

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from build_public_bundle import remove_transient_artifacts, run
+from build_public_bundle import TOP_LEVEL_FILES, remove_transient_artifacts, run
 
 
 def test_snapshot_cleanup_removes_runtime_caches(tmp_path: Path) -> None:
@@ -37,3 +37,6 @@ def test_validation_subprocesses_do_not_write_bytecode(tmp_path: Path, monkeypat
     run(["python", "-c", "pass"], tmp_path)
 
     assert captured["PYTHONDONTWRITEBYTECODE"] == "1"
+
+def test_chinese_readme_is_included_in_public_snapshot_files() -> None:
+    assert "README.zh-CN.md" in TOP_LEVEL_FILES

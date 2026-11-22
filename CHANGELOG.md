@@ -3,6 +3,33 @@
 All notable changes will be documented here. The project intends to use
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-11-22
+
+### Added
+
+- Polished English and Simplified Chinese README pages with a new SVG banner,
+  badges, quick-start commands, starter bundles, a routing table, a collapsible
+  skill catalog, an architecture diagram, examples, provenance, and licensing.
+- Added `docs/INSTALL.md` with platform-specific installation, archive checksum
+  verification, upgrades, manual installation, and troubleshooting guidance.
+- Added `scripts/check_all.py` as the canonical 19-stage validation command for
+  contributors and CI-ready local checks.
+- Added documentation regression coverage for the banner, installation guide,
+  Chinese README skill counts, starter-bundle allowlists, and release scoping.
+
+### Changed
+
+- Included `README.zh-CN.md` in generated public snapshots and release archives.
+- Moved `wireshark-analysis` into the tools, scanning, and supply-chain category
+  in the generated skill index.
+- Updated contributor and maintainer documentation to use the aggregate
+  validation command.
+
+### Fixed
+
+- Regenerated `docs/SKILLS_INDEX.md` so the published catalog reflects the
+  current 39-skill classification and metadata.
+
 ## [1.0.0] - 2026-11-22
 
 ### Added
