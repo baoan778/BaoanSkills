@@ -94,15 +94,20 @@ def validate_skill_gitignore(root: Path, names: list[str]) -> list[str]:
     return errors
 
 
+def has_non_lf_line_endings(path: Path) -> bool:
+    """Return whether a file contains CR bytes instead of canonical LF endings."""
+    return b"\r" in path.read_bytes()
+
+
 def skill_files(skill_dir: Path) -> list[Path]:
-    files: list[Path] = []
-    for path in sorted(skill_dir.rglob("*")):
-        relative = path.relative_to(skill_dir)
-        if any(part in IGNORED_FILE_PARTS for part in relative.parts):
-            continue
-        if path.is_file() and path.suffix.lower() not in {".pyc", ".pyo"}:
-            files.append(path)
-    return files
+    files = [
+        path
+        for path in skill_dir.rglob("*")
+        if path.is_file()
+        and path.suffix.lower() not in {".pyc", ".pyo"}
+        and not any(part in IGNORED_FILE_PARTS for part in path.relative_to(skill_dir).parts)
+    ]
+    return sorted(files, key=lambda path: path.relative_to(skill_dir).as_posix())
 
 
 def manifest_entry(root: Path, name: str) -> tuple[dict[str, Any] | None, list[str]]:
@@ -163,6 +168,10 @@ def manifest_entry(root: Path, name: str) -> tuple[dict[str, Any] | None, list[s
                 errors.append(f"{name}: license evidence does not exist: {evidence_path.as_posix()}")
             else:
                 evidence_sha256 = sha256_file(full_evidence)
+                if has_non_lf_line_endings(full_evidence):
+                    errors.append(
+                        f"{name}: license evidence must use LF line endings: {evidence_path.as_posix()}"
+                    )
 
     source = fields["source"]
     if source == "original":
@@ -195,10 +204,15 @@ def manifest_entry(root: Path, name: str) -> tuple[dict[str, Any] | None, list[s
             errors.append(f"{name}: symlinks are not allowed in published skills ({path.relative_to(skill_dir)})")
             continue
         relative = path.relative_to(skill_dir).as_posix()
-        files.append({"path": relative, "sha256": sha256_file(path), "bytes": path.stat().st_size})
+        data = path.read_bytes()
+        files.append({"path": relative, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
         if path.suffix.lower() in TEXT_SUFFIXES:
+            if b"\r" in data:
+                errors.append(
+                    f"{name}: {relative} must use LF line endings; run python scripts/check_whitespace.py --fix"
+                )
             try:
-                text = path.read_text(encoding="utf-8-sig")
+                text = data.decode("utf-8-sig")
             except UnicodeDecodeError as exc:
                 errors.append(f"{name}: {relative} is not valid UTF-8: {exc}")
                 continue
@@ -235,6 +249,54 @@ def render_lock(payload: dict[str, Any]) -> str:
     return json.dumps(payload, ensure_ascii=True, indent=2, sort_keys=True) + "\n"
 
 
+def compare_entry(name: str, actual: Any, expected: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    if not isinstance(actual, dict):
+        return [f"lock entry for {name} must be a JSON object"]
+
+    for field in sorted(set(expected) | set(actual)):
+        if field == "files":
+            continue
+        if actual.get(field) != expected.get(field):
+            errors.append(f"lock entry has drifted for {name}: field '{field}'")
+
+    actual_files = actual.get("files")
+    if not isinstance(actual_files, list):
+        errors.append(f"lock entry has drifted for {name}: field 'files' must be a list")
+        return errors
+
+    expected_files = expected["files"]
+    expected_by_path = {item["path"]: item for item in expected_files}
+    actual_by_path: dict[str, dict[str, Any]] = {}
+    for item in actual_files:
+        if not isinstance(item, dict) or not isinstance(item.get("path"), str):
+            errors.append(f"lock entry has drifted for {name}: malformed file entry")
+            continue
+        path = item["path"]
+        if path in actual_by_path:
+            errors.append(f"lock entry has drifted for {name}: duplicate file entry {path}")
+            continue
+        actual_by_path[path] = item
+
+    expected_paths = [item["path"] for item in expected_files]
+    for path in sorted(set(expected_by_path) - set(actual_by_path)):
+        errors.append(f"lock entry has drifted for {name}: missing file {path}")
+    for path in sorted(set(actual_by_path) - set(expected_by_path)):
+        errors.append(f"lock entry has drifted for {name}: unexpected file {path}")
+    for path in sorted(set(expected_by_path) & set(actual_by_path)):
+        if actual_by_path[path] != expected_by_path[path]:
+            errors.append(f"lock entry has drifted for {name}: file metadata changed: {path}")
+
+    actual_paths = [
+        item["path"]
+        for item in actual_files
+        if isinstance(item, dict) and isinstance(item.get("path"), str)
+    ]
+    if set(actual_paths) == set(expected_paths) and actual_paths != expected_paths:
+        errors.append(f"lock entry has drifted for {name}: canonical file order changed")
+    return errors
+
+
 def compare_lock(actual: Any, expected: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     if not isinstance(actual, dict):
@@ -255,7 +317,7 @@ def compare_lock(actual: Any, expected: dict[str, Any]) -> list[str]:
         errors.append("lock contains non-allowlisted skills: " + ", ".join(extra))
     for name in sorted(set(expected_skills) & set(actual_skills)):
         if actual_skills[name] != expected_skills[name]:
-            errors.append(f"lock entry has drifted for {name}")
+            errors.extend(compare_entry(name, actual_skills[name], expected_skills[name]))
     return errors
 
 

@@ -27,6 +27,8 @@ def findings(path: Path, text: str) -> list[tuple[int | None, str]]:
     for line_number, line in enumerate(text.splitlines(), start=1):
         if line.endswith((" ", "\t")):
             problems.append((line_number, "trailing whitespace"))
+    if "\r" in text:
+        problems.append((None, "CRLF or lone CR line endings; canonical text files must use LF"))
     if not text.endswith("\n"):
         problems.append((None, "missing final newline"))
     if text.endswith(("\n\n", "\r\n\r\n")):

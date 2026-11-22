@@ -44,6 +44,13 @@ local corpus paths, sizes, and hashes.
 
 ### Changed
 
+- Ordered every `release/provenance.lock.json` file entry by POSIX relative
+  path and hashed raw bytes, so the generated lock is identical on Windows and
+  Linux.
+- Required canonical LF line endings for release-scoped text files and license
+  evidence; `check_whitespace.py --fix` performs the reviewed normalization.
+- Refreshed SHA-pinned GitHub Actions for checkout, Python setup, artifact
+  upload, CodeQL, and secret scanning.
 - Normalized frontmatter and `agents/openai.yaml` metadata across all 39 public
   skills, including explicit risk, tags, provenance, and authorization fields.
 - Replaced placeholder applicability text with skill-specific use and non-use
@@ -69,6 +76,11 @@ local corpus paths, sizes, and hashes.
 
 ### Fixed
 
+- Made publication drift errors identify the affected metadata field, missing
+  or unexpected file, changed file record, duplicate record, or non-canonical
+  order instead of reporting only a generic skill-level mismatch.
+- Normalized residual CRLF line endings in four allowlisted skills before
+  regenerating the provenance lock, removing Windows-only publication drift.
 - Restored the missing Semgrep quick-reference and workflow documents from the
   pinned upstream commit and linked them from the skill entrypoint.
 - Repaired missing or ambiguous cross-skill references in CTF forensics, misc,

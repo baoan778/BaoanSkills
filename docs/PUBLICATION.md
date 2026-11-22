@@ -78,6 +78,8 @@ evidence of safety, authorship, or redistribution rights.
 Review the skill and its evidence before adding it to the allowlist. Then run:
 
 ```bash
+python scripts/check_whitespace.py
+python scripts/check_encoding.py
 python scripts/check_publication.py --write
 python scripts/check_publication.py --check
 ```
@@ -85,6 +87,27 @@ python scripts/check_publication.py --check
 `--write` regenerates `release/provenance.lock.json`; `--check` fails on any
 allowlist drift, metadata drift, evidence hash drift, or file hash drift. Commit
 the allowlist, `.gitignore`, metadata, evidence, and lock together.
+
+The lock format is platform-independent. Skill files are sorted by their POSIX
+relative path, and every SHA-256 value is calculated from the raw file bytes.
+Do not regenerate the lock from a checkout whose text files still use CRLF:
+publication checks reject CRLF or lone CR in skill text and license evidence,
+because Git's LF normalization would otherwise make the committed payload drift
+from the Windows working tree.
+
+On Windows, repair line endings and trailing whitespace first, review the diff,
+and only then regenerate the lock:
+
+```powershell
+python scripts/check_whitespace.py --fix
+python scripts/check_encoding.py
+python scripts/check_publication.py --write
+python scripts/check_publication.py --check
+```
+
+When `--check` fails, use its field-level diagnostic to fix the named metadata,
+file record, missing or extra path, or canonical file order. Do not hand-edit
+the lock to hide a source change.
 
 ## Validation scopes
 
@@ -94,15 +117,15 @@ Use the normal checks in the staging checkout:
 python -m pytest
 python -m ruff check scripts tests
 python scripts/validate_skills.py --strict
+python scripts/check_whitespace.py
+python scripts/check_encoding.py
 python scripts/build_kb_manifest.py --check
 python scripts/check_publication.py --check
 python scripts/check_workflows.py
 python scripts/check_links.py
-python scripts/check_whitespace.py
 python scripts/check_markdown_structure.py
 python scripts/check_resources.py
 python scripts/check_skill_layout.py
-python scripts/check_encoding.py
 python scripts/smoke_test_scripts.py
 python scripts/apply_skill_quality.py --check
 python scripts/generate_agent_metadata.py --check

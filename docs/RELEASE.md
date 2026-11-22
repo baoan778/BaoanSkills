@@ -14,6 +14,8 @@ staging checkout.
 - No credentials, private target data, personal absolute paths, or raw local
   knowledge-base content are present. The allowlisted `ctf-knowledge-base` cards,
   retrieval code, and path-only manifest are expected.
+- Release-scoped text files and license evidence use canonical LF line endings,
+  and the provenance lock uses POSIX relative-path ordering.
 - The changelog is updated.
 - The release tag uses `vMAJOR.MINOR.PATCH` or a valid prerelease suffix.
 
@@ -26,15 +28,15 @@ python -m pip install -r requirements-dev.txt
 python -m pytest
 python -m ruff check scripts tests
 python scripts/validate_skills.py --strict
+python scripts/check_whitespace.py
+python scripts/check_encoding.py
 python scripts/build_kb_manifest.py --check
 python scripts/check_publication.py --check
 python scripts/check_workflows.py
 python scripts/check_links.py
-python scripts/check_whitespace.py
 python scripts/check_markdown_structure.py
 python scripts/check_resources.py
 python scripts/check_skill_layout.py
-python scripts/check_encoding.py
 python scripts/smoke_test_scripts.py
 python scripts/apply_skill_quality.py --check
 python scripts/generate_agent_metadata.py --check
@@ -57,6 +59,10 @@ including the copied tests and development configuration.
 The installer verifies every requested skill file against the snapshot's
 `release/provenance.lock.json` before copying. Treat the lock as the published
 integrity manifest: do not edit it to make a drifted checkout installable.
+
+If Windows line endings are reported, run `python scripts/check_whitespace.py
+--fix`, review the normalized files, regenerate the lock with
+`python scripts/check_publication.py --write`, and rerun all checks.
 
 ## Release automation
 

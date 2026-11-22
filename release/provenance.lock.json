@@ -6,14 +6,14 @@
       "author": "Trail of Bits",
       "files": [
         {
-          "bytes": 317,
-          "path": "agents/openai.yaml",
-          "sha256": "90e308211fd450e11e81c63ca471285c405a088fcaf9e96d863c4a10d7781ac9"
-        },
-        {
           "bytes": 22178,
           "path": "SKILL.md",
           "sha256": "5832975306ab7e4d2c4c19426c549611624b7b67fd588a8f4a24008ada0b3065"
+        },
+        {
+          "bytes": 317,
+          "path": "agents/openai.yaml",
+          "sha256": "90e308211fd450e11e81c63ca471285c405a088fcaf9e96d863c4a10d7781ac9"
         }
       ],
       "license": "CC-BY-SA-4.0",
@@ -33,14 +33,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 311,
-          "path": "agents/openai.yaml",
-          "sha256": "2bb4bf0eba847d8738cc875412c10bf93c2d77b387dc19b48206a1df0903f6de"
-        },
-        {
           "bytes": 11849,
           "path": "SKILL.md",
           "sha256": "4e8716975280493688292193d011369d95fe83200b8e4f5504b0a454e34b2dce"
+        },
+        {
+          "bytes": 311,
+          "path": "agents/openai.yaml",
+          "sha256": "2bb4bf0eba847d8738cc875412c10bf93c2d77b387dc19b48206a1df0903f6de"
         }
       ],
       "license": "MIT",
@@ -60,19 +60,19 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 11477,
+          "path": "SKILL.md",
+          "sha256": "c0086e805cbc622be6d8c63e4df38f0f9032b771d63890888df41194efecedda"
+        },
+        {
           "bytes": 327,
           "path": "agents/openai.yaml",
           "sha256": "9608263f3e09a17312a8a5001a54ecfe0d8fa8f65a9a963ed60bc381e6b8b70a"
         },
         {
-          "bytes": 12033,
+          "bytes": 11564,
           "path": "references/advanced-aws-pentesting.md",
-          "sha256": "41556bd893e2f1762271c819b39d072d14b6fcc16879071bc060f470b8673c2d"
-        },
-        {
-          "bytes": 11477,
-          "path": "SKILL.md",
-          "sha256": "c0086e805cbc622be6d8c63e4df38f0f9032b771d63890888df41194efecedda"
+          "sha256": "11d414ad4e8d16318950f4b295f16f0eb68275107702150b54e48bc2b2129813"
         }
       ],
       "license": "MIT",
@@ -92,6 +92,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4069,
+          "path": "SKILL.md",
+          "sha256": "12be5aeb92bf9b698202589ff008d1adcf905f2cabbaee99ccc12bf770d80857"
+        },
+        {
           "bytes": 326,
           "path": "agents/openai.yaml",
           "sha256": "ebff653fb587c56366deedf975a0e821c9b3e4898d071e7c94e075f9a529452f"
@@ -100,11 +105,6 @@
           "bytes": 10392,
           "path": "references/playbook.md",
           "sha256": "dfca14ac7ff98dbeb48bbee8e20e6b0fcec18abf51c660328edbff4b245f1080"
-        },
-        {
-          "bytes": 4069,
-          "path": "SKILL.md",
-          "sha256": "12be5aeb92bf9b698202589ff008d1adcf905f2cabbaee99ccc12bf770d80857"
         }
       ],
       "license": "MIT",
@@ -124,6 +124,11 @@
       "author": "Trail of Bits",
       "files": [
         {
+          "bytes": 13882,
+          "path": "SKILL.md",
+          "sha256": "2300ad144b20c2f86e64982642b8e13924092006054bd3a2dbf612021dcbc379"
+        },
+        {
           "bytes": 311,
           "path": "agents/openai.yaml",
           "sha256": "ff5f10f6025a12703c11f39a6a9a1cbc644d73ad04246f9cab61d0fe8aaded6a"
@@ -132,11 +137,6 @@
           "bytes": 600,
           "path": "scripts/burp-search.sh",
           "sha256": "9026107aa5a5b4a204a0c63de82028de3395ed68322ae73957f2142d5ef8e1bc"
-        },
-        {
-          "bytes": 13882,
-          "path": "SKILL.md",
-          "sha256": "2300ad144b20c2f86e64982642b8e13924092006054bd3a2dbf612021dcbc379"
         }
       ],
       "license": "CC-BY-SA-4.0",
@@ -156,6 +156,11 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
+          "bytes": 7849,
+          "path": "SKILL.md",
+          "sha256": "47e5c224e503d74408ac3ae291118f0a4e8f077438284fa5cd66373e2ea77c69"
+        },
+        {
           "bytes": 299,
           "path": "agents/openai.yaml",
           "sha256": "0d1ac8cb2c28ef376cfb0a61e87da3b043be2bb62cbef011d042b3d7fc79e507"
@@ -174,11 +179,6 @@
           "bytes": 19607,
           "path": "references/model-attacks.md",
           "sha256": "ed6d19135172fe5f81237570cc2b936899c88de3321e8ee750cfd3a0928fe7cb"
-        },
-        {
-          "bytes": 7849,
-          "path": "SKILL.md",
-          "sha256": "47e5c224e503d74408ac3ae291118f0a4e8f077438284fa5cd66373e2ea77c69"
         }
       ],
       "license": "MIT",
@@ -197,6 +197,11 @@
     "ctf-crypto": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 40854,
+          "path": "SKILL.md",
+          "sha256": "867adc6d9c5e319fa9b07e15be1dbd7c463477c0b4190c6afdf5d955a14f2508"
+        },
         {
           "bytes": 286,
           "path": "agents/openai.yaml",
@@ -281,11 +286,6 @@
           "bytes": 20338,
           "path": "references/zkp-and-advanced.md",
           "sha256": "a75350ff2548b769761f9c71bf159a287257ca327ca2b77ce1a8e7aecc4dcfd6"
-        },
-        {
-          "bytes": 40854,
-          "path": "SKILL.md",
-          "sha256": "867adc6d9c5e319fa9b07e15be1dbd7c463477c0b4190c6afdf5d955a14f2508"
         }
       ],
       "license": "MIT",
@@ -304,6 +304,11 @@
     "ctf-forensics": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 38715,
+          "path": "SKILL.md",
+          "sha256": "ce72b4528de5f16e866a17b55b6ea047d26c4af592b0e55cf8768d79c8fe4cf5"
+        },
         {
           "bytes": 295,
           "path": "agents/openai.yaml",
@@ -378,11 +383,6 @@
           "bytes": 22479,
           "path": "references/windows.md",
           "sha256": "c23e7de4e511aa106059e6e00019ff4f264e1893a78839613ab477fc3cee2ace"
-        },
-        {
-          "bytes": 38715,
-          "path": "SKILL.md",
-          "sha256": "ce72b4528de5f16e866a17b55b6ea047d26c4af592b0e55cf8768d79c8fe4cf5"
         }
       ],
       "license": "MIT",
@@ -402,9 +402,19 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
+          "bytes": 7515,
+          "path": "SKILL.md",
+          "sha256": "2a5bf9e69b4f5eb501a1b7a036ef5f6ea78ebb2bd7fed972f985d3946918354b"
+        },
+        {
           "bytes": 309,
           "path": "agents/openai.yaml",
           "sha256": "92989ccdf1148fbc5f33e69add1f97739900fdc5f5eb56b0485cbc6be298aa54"
+        },
+        {
+          "bytes": 3351,
+          "path": "references/archive/README.md",
+          "sha256": "8db91365476c1b0c436a14a88146a6375531499e0b7a215d524f914a6ee2f802"
         },
         {
           "bytes": 3710,
@@ -420,11 +430,6 @@
           "bytes": 3975,
           "path": "references/archive/known-gaps.md",
           "sha256": "2e082354494e19435e718392cad2e0061f55340b9d9f8c368e000b451ea46146"
-        },
-        {
-          "bytes": 3351,
-          "path": "references/archive/README.md",
-          "sha256": "8db91365476c1b0c436a14a88146a6375531499e0b7a215d524f914a6ee2f802"
         },
         {
           "bytes": 4087,
@@ -570,11 +575,6 @@
           "bytes": 6438,
           "path": "scripts/search_kb.py",
           "sha256": "36b2b454033076ba4f6c77632906a2e9e3003d2f91bd645507ee3f0363f0e61c"
-        },
-        {
-          "bytes": 7515,
-          "path": "SKILL.md",
-          "sha256": "2a5bf9e69b4f5eb501a1b7a036ef5f6ea78ebb2bd7fed972f985d3946918354b"
         }
       ],
       "license": "MIT",
@@ -594,6 +594,11 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
+          "bytes": 9063,
+          "path": "SKILL.md",
+          "sha256": "9f8b3310197633dc811aa0c125df347ca62e82c29a14eb44a62f0344df15e292"
+        },
+        {
           "bytes": 296,
           "path": "agents/openai.yaml",
           "sha256": "1c3a77dcd987619ba7ecb9569004914386146ebc776364e335243d8e35eaac0c"
@@ -612,11 +617,6 @@
           "bytes": 15792,
           "path": "references/scripts-and-obfuscation.md",
           "sha256": "0a45afed5118662d70819fe43886532029d455b6e9fd85b967eb2fa1638701c4"
-        },
-        {
-          "bytes": 9063,
-          "path": "SKILL.md",
-          "sha256": "9f8b3310197633dc811aa0c125df347ca62e82c29a14eb44a62f0344df15e292"
         }
       ],
       "license": "MIT",
@@ -635,6 +635,11 @@
     "ctf-misc": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 6818,
+          "path": "SKILL.md",
+          "sha256": "60bbb5a1ef19b529e1f710d7feebe13d633d5ff0312dfa2bb382f50090365de9"
+        },
         {
           "bytes": 295,
           "path": "agents/openai.yaml",
@@ -704,11 +709,6 @@
           "bytes": 3994,
           "path": "references/rf-sdr.md",
           "sha256": "ea61aa6d6eeba16923b6482df80c43ace8352179854ce4292b9246853af5bc04"
-        },
-        {
-          "bytes": 6818,
-          "path": "SKILL.md",
-          "sha256": "60bbb5a1ef19b529e1f710d7feebe13d633d5ff0312dfa2bb382f50090365de9"
         }
       ],
       "license": "MIT",
@@ -728,6 +728,11 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
+          "bytes": 10232,
+          "path": "SKILL.md",
+          "sha256": "ce34cd8ad41533195a6edecdf19fb0577ad5ecd9df3f5530aa25c73e867b0309"
+        },
+        {
           "bytes": 283,
           "path": "agents/openai.yaml",
           "sha256": "b606253a3e73dc7c435d0ea5c98a65c0230b4a6afb75e42ad61c0585b7b8bb30"
@@ -746,11 +751,6 @@
           "bytes": 14443,
           "path": "references/web-and-dns.md",
           "sha256": "9c33b7a0988d184d070ee6add4416a0ef87cee4e27489b4fb6be2bd5f09191cf"
-        },
-        {
-          "bytes": 10232,
-          "path": "SKILL.md",
-          "sha256": "ce34cd8ad41533195a6edecdf19fb0577ad5ecd9df3f5530aa25c73e867b0309"
         }
       ],
       "license": "MIT",
@@ -769,6 +769,11 @@
     "ctf-pwn": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 19972,
+          "path": "SKILL.md",
+          "sha256": "bca224c1a18b7efa9187eca43d72f71b3dd2708b56386864953b46f4f3cfce62"
+        },
         {
           "bytes": 292,
           "path": "agents/openai.yaml",
@@ -863,11 +868,6 @@
           "bytes": 17713,
           "path": "references/sandbox-escape.md",
           "sha256": "1e83116ca252410622b407fb729485c182712a9658b8fb9f09a966fb5f180573"
-        },
-        {
-          "bytes": 19972,
-          "path": "SKILL.md",
-          "sha256": "bca224c1a18b7efa9187eca43d72f71b3dd2708b56386864953b46f4f3cfce62"
         }
       ],
       "license": "MIT",
@@ -886,6 +886,11 @@
     "ctf-reverse": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 13476,
+          "path": "SKILL.md",
+          "sha256": "df97b6f4a61160ba6c9abc1992042823a68597505fc9363e00e4a62e5a731165"
+        },
         {
           "bytes": 283,
           "path": "agents/openai.yaml",
@@ -980,11 +985,6 @@
           "bytes": 15893,
           "path": "references/tools.md",
           "sha256": "706839b87519a06a11bd5306dbcbbb10a8904500b7bbd7ce31bc9a8d2f8f6d2a"
-        },
-        {
-          "bytes": 13476,
-          "path": "SKILL.md",
-          "sha256": "df97b6f4a61160ba6c9abc1992042823a68597505fc9363e00e4a62e5a731165"
         }
       ],
       "license": "MIT",
@@ -1003,6 +1003,11 @@
     "ctf-web": {
       "author": "BaoanSkills contributors",
       "files": [
+        {
+          "bytes": 11293,
+          "path": "SKILL.md",
+          "sha256": "bb6ac1627c25f0dc576f80defcb250184301015219a1e07192c057b66968a561"
+        },
         {
           "bytes": 273,
           "path": "agents/openai.yaml",
@@ -1107,11 +1112,6 @@
           "bytes": 15865,
           "path": "references/web3.md",
           "sha256": "243de8155a91b1486a20372232b22d42194f14a6664c98c9c48cef58d7cf91a0"
-        },
-        {
-          "bytes": 11293,
-          "path": "SKILL.md",
-          "sha256": "bb6ac1627c25f0dc576f80defcb250184301015219a1e07192c057b66968a561"
         }
       ],
       "license": "MIT",
@@ -1131,14 +1131,14 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
-          "bytes": 277,
-          "path": "agents/openai.yaml",
-          "sha256": "3e95fe3180422533bb250d0c3ba33c007a779ec3b8e027b0bc3b0473c2332400"
-        },
-        {
           "bytes": 5383,
           "path": "SKILL.md",
           "sha256": "a97228b2eb53f652285da1a675b426ba629b06bc7b4cc7f2ca1af46b3d129e45"
+        },
+        {
+          "bytes": 277,
+          "path": "agents/openai.yaml",
+          "sha256": "3e95fe3180422533bb250d0c3ba33c007a779ec3b8e027b0bc3b0473c2332400"
         }
       ],
       "license": "MIT",
@@ -1158,14 +1158,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 316,
-          "path": "agents/openai.yaml",
-          "sha256": "42702abd2aad9c2e525d8b7b3bf10fda4b5e8124a0c3c2b76cb38c7fa6fa7080"
-        },
-        {
           "bytes": 12393,
           "path": "SKILL.md",
           "sha256": "85ba14dca6e1a07b160cda2585557669086f4a6b1bd421a6d63953cb2cef50a2"
+        },
+        {
+          "bytes": 316,
+          "path": "agents/openai.yaml",
+          "sha256": "42702abd2aad9c2e525d8b7b3bf10fda4b5e8124a0c3c2b76cb38c7fa6fa7080"
         }
       ],
       "license": "MIT",
@@ -1185,6 +1185,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 3748,
+          "path": "SKILL.md",
+          "sha256": "873c48d3b128c1aee7316bd81465c1458a57e0b5c8e43a7f70e7bf5b82192a3e"
+        },
+        {
           "bytes": 302,
           "path": "agents/openai.yaml",
           "sha256": "1b392e6488ae5375990c215079a30e3508f3f43a82eaa0f29df327a439979e7e"
@@ -1193,11 +1198,6 @@
           "bytes": 10175,
           "path": "references/playbook.md",
           "sha256": "c3fabb97354dda57eeaef73c3d3407a836e3ff6530ad97061fe5607ab91eb651"
-        },
-        {
-          "bytes": 3748,
-          "path": "SKILL.md",
-          "sha256": "873c48d3b128c1aee7316bd81465c1458a57e0b5c8e43a7f70e7bf5b82192a3e"
         }
       ],
       "license": "MIT",
@@ -1217,6 +1217,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 3804,
+          "path": "SKILL.md",
+          "sha256": "1b472c31a2023ac2aece0da6da7fb570046827bedd2d23d47cb9119eea1f9b21"
+        },
+        {
           "bytes": 313,
           "path": "agents/openai.yaml",
           "sha256": "408e5d25b317cc3f3f67271de251218ccc822b5267049f0869a8fc3e470be15a"
@@ -1225,11 +1230,6 @@
           "bytes": 11403,
           "path": "references/playbook.md",
           "sha256": "ccca2b2feb07b816aabf4acd6f831e7db0c1ea91127809021a61cce63fd9b175"
-        },
-        {
-          "bytes": 3804,
-          "path": "SKILL.md",
-          "sha256": "1b472c31a2023ac2aece0da6da7fb570046827bedd2d23d47cb9119eea1f9b21"
         }
       ],
       "license": "MIT",
@@ -1249,14 +1249,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 296,
-          "path": "agents/openai.yaml",
-          "sha256": "c0288d78023e2de8538a2d2ad1b62641ff151748a0adfa2523f08480a043df72"
-        },
-        {
           "bytes": 13986,
           "path": "SKILL.md",
           "sha256": "9e98f0056802822981b3a31d83571db502d5ecb0451143552131714f81775b28"
+        },
+        {
+          "bytes": 296,
+          "path": "agents/openai.yaml",
+          "sha256": "c0288d78023e2de8538a2d2ad1b62641ff151748a0adfa2523f08480a043df72"
         }
       ],
       "license": "MIT",
@@ -1276,6 +1276,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4757,
+          "path": "SKILL.md",
+          "sha256": "2d51a90232d6a170c29bc46defb97c8c87b99baec767a8592394cc6b6439c433"
+        },
+        {
           "bytes": 305,
           "path": "agents/openai.yaml",
           "sha256": "8bf2a65cb7fbedb85a288d2ada0f0b0531832b83ff52ef87f235bcc53704ba8d"
@@ -1284,11 +1289,6 @@
           "bytes": 9042,
           "path": "references/playbook.md",
           "sha256": "e9435af25c7b54e9ac3b39010e5ceb7fd91ad3506e8c142d58fe604af83910fa"
-        },
-        {
-          "bytes": 4757,
-          "path": "SKILL.md",
-          "sha256": "2d51a90232d6a170c29bc46defb97c8c87b99baec767a8592394cc6b6439c433"
         }
       ],
       "license": "MIT",
@@ -1308,6 +1308,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4847,
+          "path": "SKILL.md",
+          "sha256": "5d1a1fcd578d5998d546f7570bbee6eed16f34054c48d4ff22cf0c8a70db612d"
+        },
+        {
           "bytes": 293,
           "path": "agents/openai.yaml",
           "sha256": "0953e1aff62d4bc8f6d3cd68ab5e30280f715c3baba2fa9d7465ace8d8f0bbcc"
@@ -1316,11 +1321,6 @@
           "bytes": 10956,
           "path": "references/playbook.md",
           "sha256": "5e6a7686aa4bb54f5dc9ffc0900f38a495f94e973c2dca31427b1be7ae0ad8d4"
-        },
-        {
-          "bytes": 4847,
-          "path": "SKILL.md",
-          "sha256": "5d1a1fcd578d5998d546f7570bbee6eed16f34054c48d4ff22cf0c8a70db612d"
         }
       ],
       "license": "MIT",
@@ -1340,14 +1340,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 292,
-          "path": "agents/openai.yaml",
-          "sha256": "dbee95c10fbe851feb5d3177c97bdd3df59dfd69b2452454cb86eacfdd4573cc"
-        },
-        {
           "bytes": 11665,
           "path": "SKILL.md",
           "sha256": "ffa148ad4a48122a7099c73d8cffb0dd5798623058cf523dd993ffe21f742cf4"
+        },
+        {
+          "bytes": 292,
+          "path": "agents/openai.yaml",
+          "sha256": "dbee95c10fbe851feb5d3177c97bdd3df59dfd69b2452454cb86eacfdd4573cc"
         }
       ],
       "license": "MIT",
@@ -1367,14 +1367,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 317,
-          "path": "agents/openai.yaml",
-          "sha256": "e935f7a334e532d37cf069cfdf6f088b4b00a3569fa44bc1ec34872d7e586dab"
-        },
-        {
           "bytes": 10886,
           "path": "SKILL.md",
           "sha256": "fe9e78581a3ccc7158699a3270e10dfd47a95679c9d04080d2d8f8c817641d7a"
+        },
+        {
+          "bytes": 317,
+          "path": "agents/openai.yaml",
+          "sha256": "e935f7a334e532d37cf069cfdf6f088b4b00a3569fa44bc1ec34872d7e586dab"
         }
       ],
       "license": "MIT",
@@ -1394,14 +1394,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 336,
-          "path": "agents/openai.yaml",
-          "sha256": "b736a961e97bd3637b3bf500a4baa2aad5a3c34c7d4528b7a3b12adc30eb6cf4"
-        },
-        {
           "bytes": 9603,
           "path": "SKILL.md",
           "sha256": "878543c8842d5f1722efbfb96e41540572f65ebd8a64f491bafc0b5d08ad59ad"
+        },
+        {
+          "bytes": 336,
+          "path": "agents/openai.yaml",
+          "sha256": "b736a961e97bd3637b3bf500a4baa2aad5a3c34c7d4528b7a3b12adc30eb6cf4"
         }
       ],
       "license": "MIT",
@@ -1421,14 +1421,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 266,
-          "path": "agents/openai.yaml",
-          "sha256": "5295d3370caad10e28c63318cc5100244a845c143d59a92d98197f3d78e9b27d"
-        },
-        {
           "bytes": 9278,
           "path": "SKILL.md",
           "sha256": "5dc117d7a470734e983a1f09a7b2a8d6df2e75516d52291a2d7ddc55104852fb"
+        },
+        {
+          "bytes": 266,
+          "path": "agents/openai.yaml",
+          "sha256": "5295d3370caad10e28c63318cc5100244a845c143d59a92d98197f3d78e9b27d"
         }
       ],
       "license": "MIT",
@@ -1448,19 +1448,19 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 7154,
+          "path": "SKILL.md",
+          "sha256": "32849f42b4ee2861cad8f1ba2ce8ca9b4e1335b1f5c337789dad5c2fb3cff819"
+        },
+        {
           "bytes": 279,
           "path": "agents/openai.yaml",
           "sha256": "0fa3060e13cd5a47de2a5b6bb91ee3e60689fcc0e55fa8b853a6573655d53a6b"
         },
         {
-          "bytes": 11136,
+          "bytes": 10653,
           "path": "references/assessment-playbook.md",
-          "sha256": "ae4f75b75aad9a6ea079220e67737c1205c18a424d5b867c3799df6b39ad1329"
-        },
-        {
-          "bytes": 7322,
-          "path": "SKILL.md",
-          "sha256": "6f51f5b4d5785a3fc591e330829cad6e6a490ce29d946ae5a3b1aded9b1c8711"
+          "sha256": "a76145c28d06df5d414d3b73f97b0acf37cc0382599bef2e09a38e32046b1760"
         }
       ],
       "license": "MIT",
@@ -1470,7 +1470,7 @@
       "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the detailed multi-tool command catalog and scanning methodology into a directly linked reference and condensed the entrypoint into scope, pilot, validation, evidence, and reporting guidance.",
       "provenance_status": "verified",
       "retrieved_at": "2026-11-22",
-      "skill_md_sha256": "6f51f5b4d5785a3fc591e330829cad6e6a490ce29d946ae5a3b1aded9b1c8711",
+      "skill_md_sha256": "32849f42b4ee2861cad8f1ba2ce8ca9b4e1335b1f5c337789dad5c2fb3cff819",
       "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/scanning-tools/SKILL.md",
       "source_repo": "https://github.com/zebbern/claude-code-guide",
       "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
@@ -1479,6 +1479,11 @@
     "semgrep-rule-creator": {
       "author": "Trail of Bits",
       "files": [
+        {
+          "bytes": 8302,
+          "path": "SKILL.md",
+          "sha256": "9085bee21f30fc0206c2c6ca04e817fb7bfcea2f608b7dde38f873f188dd0109"
+        },
         {
           "bytes": 283,
           "path": "agents/openai.yaml",
@@ -1493,11 +1498,6 @@
           "bytes": 7725,
           "path": "references/workflow.md",
           "sha256": "3dab347aa2e2c78b5a7a94ebb0d73d92dcb5c7df87d60ea9ee8f2671eba1c7b9"
-        },
-        {
-          "bytes": 8302,
-          "path": "SKILL.md",
-          "sha256": "9085bee21f30fc0206c2c6ca04e817fb7bfcea2f608b7dde38f873f188dd0109"
         }
       ],
       "license": "CC-BY-SA-4.0",
@@ -1517,6 +1517,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4176,
+          "path": "SKILL.md",
+          "sha256": "8523c790bf6936420c0564dd59b9b6fbee906071a690318e541002b0a9f246b5"
+        },
+        {
           "bytes": 297,
           "path": "agents/openai.yaml",
           "sha256": "5bfe97fcecc991457139fca9f8ce9b984dbbee5d80d4d2f60ab9fe5bd610e7b2"
@@ -1525,11 +1530,6 @@
           "bytes": 11648,
           "path": "references/playbook.md",
           "sha256": "722ac3e5099e8cf15b9d05f5b50b5842863df78c8cc8d5c79d9e5deda254a641"
-        },
-        {
-          "bytes": 4176,
-          "path": "SKILL.md",
-          "sha256": "8523c790bf6936420c0564dd59b9b6fbee906071a690318e541002b0a9f246b5"
         }
       ],
       "license": "MIT",
@@ -1549,6 +1549,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4800,
+          "path": "SKILL.md",
+          "sha256": "c9815ea8cdd15ac7d46bf679956eeab3f14ebc4bf2d28fd6616c0304c29908b9"
+        },
+        {
           "bytes": 324,
           "path": "agents/openai.yaml",
           "sha256": "97848bf436d0d0719cc3e4763ee60182d271762de0b10000addc4350cfb84095"
@@ -1557,11 +1562,6 @@
           "bytes": 9434,
           "path": "references/playbook.md",
           "sha256": "cf06cd8a03347fdf1b0d5745429f4150a49435e21b4e0c949da4617a72c934f2"
-        },
-        {
-          "bytes": 4800,
-          "path": "SKILL.md",
-          "sha256": "c9815ea8cdd15ac7d46bf679956eeab3f14ebc4bf2d28fd6616c0304c29908b9"
         }
       ],
       "license": "MIT",
@@ -1581,6 +1581,11 @@
       "author": "BaoanSkills contributors",
       "files": [
         {
+          "bytes": 9324,
+          "path": "SKILL.md",
+          "sha256": "3fdeab3bdbeb1acf0d8e78c81d29b3b72eda640a7afed14d94492cda08b7b9fc"
+        },
+        {
           "bytes": 295,
           "path": "agents/openai.yaml",
           "sha256": "ae7968a77d526014b10a118b998313c473544d516f2c23c2d774aa502242444e"
@@ -1589,11 +1594,6 @@
           "bytes": 4235,
           "path": "scripts/install_ctf_tools.sh",
           "sha256": "71371d189dce7ca28285faec6433ac1dcbd7750478766fa04e5b68ecd3d162ea"
-        },
-        {
-          "bytes": 9324,
-          "path": "SKILL.md",
-          "sha256": "3fdeab3bdbeb1acf0d8e78c81d29b3b72eda640a7afed14d94492cda08b7b9fc"
         }
       ],
       "license": "MIT",
@@ -1613,14 +1613,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 322,
-          "path": "agents/openai.yaml",
-          "sha256": "a57ad7ce402ddad060d5d5273a3cc292ce724585f12fc55958b3cc0682199e7b"
-        },
-        {
           "bytes": 12817,
           "path": "SKILL.md",
           "sha256": "349f0767570e02a3b81676580cf612109b97d93cb6f0ab1723236fa6acd12898"
+        },
+        {
+          "bytes": 322,
+          "path": "agents/openai.yaml",
+          "sha256": "a57ad7ce402ddad060d5d5273a3cc292ce724585f12fc55958b3cc0682199e7b"
         }
       ],
       "license": "MIT",
@@ -1640,14 +1640,14 @@
       "author": "zebbern",
       "files": [
         {
-          "bytes": 305,
-          "path": "agents/openai.yaml",
-          "sha256": "7754fbbf3020ffc3e4e8b108358b0dbf05639a09efff9b53eb112f9d4a775a63"
-        },
-        {
           "bytes": 13403,
           "path": "SKILL.md",
           "sha256": "8f7fcfd9780880969c77ff6bc49fb5dcada60033f1fffb388fd7d0811e834ebc"
+        },
+        {
+          "bytes": 305,
+          "path": "agents/openai.yaml",
+          "sha256": "7754fbbf3020ffc3e4e8b108358b0dbf05639a09efff9b53eb112f9d4a775a63"
         }
       ],
       "license": "MIT",
@@ -1667,6 +1667,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 3655,
+          "path": "SKILL.md",
+          "sha256": "9e64df2a43f33acb0663e00dd488b820831734bad9874b2c4793a01d4d9be88f"
+        },
+        {
           "bytes": 317,
           "path": "agents/openai.yaml",
           "sha256": "7680940add1833c52e39062ad48937feff451727bf6a9d782357271d242a65a3"
@@ -1675,11 +1680,6 @@
           "bytes": 10346,
           "path": "references/playbook.md",
           "sha256": "1e1befbd2c518f5c27d37c6c2ca9bd5672aa54f9aa23ed4e8b62a61d9fd436a4"
-        },
-        {
-          "bytes": 3655,
-          "path": "SKILL.md",
-          "sha256": "9e64df2a43f33acb0663e00dd488b820831734bad9874b2c4793a01d4d9be88f"
         }
       ],
       "license": "MIT",
@@ -1699,24 +1699,24 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 5681,
+          "path": "SKILL.md",
+          "sha256": "e00f7d74ff4a43130173e1e4039238be76fd4756ce4bd5bc45efc073981d8e49"
+        },
+        {
           "bytes": 314,
           "path": "agents/openai.yaml",
           "sha256": "06070e90473a15f33fc8c87f8f69b9435a2eb531c1b6d7b7c320884b8cba2935"
         },
         {
-          "bytes": 3350,
+          "bytes": 3269,
           "path": "references/assessment-tables.md",
-          "sha256": "272e11481e6dcba4c35344577bff15f9ee0691093381cd10100aef8d59ce25c1"
+          "sha256": "699f30a56876c53538389a6d34dfbd1724031041c7c05ed62f0c56d7c005775d"
         },
         {
-          "bytes": 19225,
+          "bytes": 18807,
           "path": "references/vulnerability-catalog.md",
-          "sha256": "9ddb80dbcde713c037a22742350a42a21cae25fef5a87551571961cc8b9bcb27"
-        },
-        {
-          "bytes": 5780,
-          "path": "SKILL.md",
-          "sha256": "41af5f94ebffe01c61ce6b1375ba1f98a3f9819adffab36bdd5222a2c6f635b5"
+          "sha256": "e2d5452860a6f720e0ccfc73a403c5fb2f50dee74ee71ec2920df99abbc46e0a"
         }
       ],
       "license": "MIT",
@@ -1726,7 +1726,7 @@
       "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the full vulnerability taxonomy and supporting assessment tables into directly linked references and turned the entrypoint into a concise taxonomy-selection, delegation, evidence, and stop-condition router.",
       "provenance_status": "verified",
       "retrieved_at": "2026-11-22",
-      "skill_md_sha256": "41af5f94ebffe01c61ce6b1375ba1f98a3f9819adffab36bdd5222a2c6f635b5",
+      "skill_md_sha256": "e00f7d74ff4a43130173e1e4039238be76fd4756ce4bd5bc45efc073981d8e49",
       "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/top-web-vulnerabilities/SKILL.md",
       "source_repo": "https://github.com/zebbern/claude-code-guide",
       "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
@@ -1736,6 +1736,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4205,
+          "path": "SKILL.md",
+          "sha256": "9cfbb980276ce78e1c4945e378cb0cb6cd8625374e11f7c8a0caf1e57fffdeff"
+        },
+        {
           "bytes": 313,
           "path": "agents/openai.yaml",
           "sha256": "db2c60f7635dc85447b4887da980b04e3e50e1896d401dfd1bfd4ebbaba3099b"
@@ -1744,11 +1749,6 @@
           "bytes": 12236,
           "path": "references/playbook.md",
           "sha256": "5a31634165d497930cda8b15f26250074de499dd6ed4199fca7713ee96d16298"
-        },
-        {
-          "bytes": 4205,
-          "path": "SKILL.md",
-          "sha256": "9cfbb980276ce78e1c4945e378cb0cb6cd8625374e11f7c8a0caf1e57fffdeff"
         }
       ],
       "license": "MIT",
@@ -1768,6 +1768,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4148,
+          "path": "SKILL.md",
+          "sha256": "45f9d5bf37e4180f9dc5cc2a45ce6a54a8016c8906b7d2087bba9a5a6cfce65c"
+        },
+        {
           "bytes": 304,
           "path": "agents/openai.yaml",
           "sha256": "a0b08500c4888e39bc80566e886c32b843537abe6eed967859597fb4f032a98a"
@@ -1776,11 +1781,6 @@
           "bytes": 10014,
           "path": "references/playbook.md",
           "sha256": "69c76f4a31f61881fc81674f5d3cf0294e09dfd22302af0ee5a70459360cd18e"
-        },
-        {
-          "bytes": 4148,
-          "path": "SKILL.md",
-          "sha256": "45f9d5bf37e4180f9dc5cc2a45ce6a54a8016c8906b7d2087bba9a5a6cfce65c"
         }
       ],
       "license": "MIT",
@@ -1800,24 +1800,24 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 8753,
+          "path": "SKILL.md",
+          "sha256": "67f4092eb0fd5f05e2e6fdbd4eb2b233370ce818534f348665c07a8a236b58f1"
+        },
+        {
           "bytes": 344,
           "path": "agents/openai.yaml",
           "sha256": "c29a25bb70d0e877f2fe4cefd2470fca11aa9d0759f11f2b46878b4eb8806f6d"
         },
         {
-          "bytes": 9461,
+          "bytes": 9088,
           "path": "references/assessment-playbook.md",
-          "sha256": "7fe18a2252c3b0d56330802750582c01a06677b088a1338c0673fb815b916a15"
+          "sha256": "b2388f895f5fc41ffff330d0375cc18c5641567eb6ae56a59cc8af7d8e89d505"
         },
         {
-          "bytes": 2470,
+          "bytes": 2393,
           "path": "references/wordpress-7-security.md",
-          "sha256": "5c3a586296c1bb5bed34c569b8047ab26ed05596c1a89f48101d3b4dd8bddcc2"
-        },
-        {
-          "bytes": 8958,
-          "path": "SKILL.md",
-          "sha256": "e87a421bb8d79a7e99647ee6795d4f902806b84a703345b3c5e2fda2fd39941f"
+          "sha256": "f567aef7be9744b4c9f43754e035d6cafb741788d3b6a730fc6ab7ef7fe188e7"
         }
       ],
       "license": "MIT",
@@ -1827,7 +1827,7 @@
       "modifications": "Normalized frontmatter, metadata, and formatting; preserved or added an authorization boundary and made other non-substantive editorial changes. Public quality normalization: concise discovery description, reviewed risk and tags, explicit tool scope, and skill-specific UI presentation. Moved the long enumeration and controlled validation commands into a directly linked assessment playbook, moved WordPress 7.0 endpoint checks into a second linked reference, and condensed the entrypoint into scope, validation, reporting, and stop-condition guidance.",
       "provenance_status": "verified",
       "retrieved_at": "2026-11-22",
-      "skill_md_sha256": "e87a421bb8d79a7e99647ee6795d4f902806b84a703345b3c5e2fda2fd39941f",
+      "skill_md_sha256": "67f4092eb0fd5f05e2e6fdbd4eb2b233370ce818534f348665c07a8a236b58f1",
       "source": "https://github.com/zebbern/claude-code-guide/blob/b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0/skills/wordpress-penetration-testing/SKILL.md",
       "source_repo": "https://github.com/zebbern/claude-code-guide",
       "upstream_commit": "b67ee2b149bdd6e35bbeeb800bc2cc9e4a34b4e0",
@@ -1837,6 +1837,11 @@
       "author": "zebbern",
       "files": [
         {
+          "bytes": 4498,
+          "path": "SKILL.md",
+          "sha256": "eab731bf71b1ab66d1d3038ba11ab457f7048ab95a216294e73ca84a20f0708c"
+        },
+        {
           "bytes": 302,
           "path": "agents/openai.yaml",
           "sha256": "08353896e0c863cdcc23f0cc505febb0496173582d5d436484d6c380957ba567"
@@ -1845,11 +1850,6 @@
           "bytes": 10737,
           "path": "references/playbook.md",
           "sha256": "f9d4a6c0f1de640d5ff49a3220ebdb2dcdbaa11af07ed975e24498b6bdf5e411"
-        },
-        {
-          "bytes": 4498,
-          "path": "SKILL.md",
-          "sha256": "eab731bf71b1ab66d1d3038ba11ab457f7048ab95a216294e73ca84a20f0708c"
         }
       ],
       "license": "MIT",
