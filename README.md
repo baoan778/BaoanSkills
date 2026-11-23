@@ -260,7 +260,7 @@ Additional guarantees:
 
 - the installer verifies requested files before copying and aborts on any
   missing, extra, symlinked, or hash-mismatched file;
-- release archives include SHA-256 checksum files and are smoke-tested before
+- release ZIPs include a SHA-256 checksum manifest and are smoke-tested before
   publication;
 - CI validates Linux and Windows across Python 3.10, 3.11, and 3.12;
 - CodeQL, gitleaks, link checks, resource checks, Markdown checks, provenance

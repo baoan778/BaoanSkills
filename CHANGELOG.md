@@ -3,6 +3,14 @@
 All notable changes will be documented here. The project intends to use
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Simplified release assets to a single `baoanskills-release.zip` archive and a
+  `SHA256SUMS` checksum manifest. The published `v1.0.1` assets remain
+  unchanged.
+
 ## [1.0.1] - 2026-11-23
 
 ### Added

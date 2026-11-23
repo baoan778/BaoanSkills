@@ -38,6 +38,7 @@ build/
 *.zip
 *.tar.gz
 *.sha256
+/SHA256SUMS
 !assets/**/*.zip
 reports/
 output/
