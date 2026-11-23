@@ -2,6 +2,7 @@
 # proposes reviewed updates; update this file and validate the full CI matrix.
 PyYAML==6.0.3
 pytest==9.2.0
-# pre-commit 4.7 requires Python 3.11; keep 4.6.2 while Python 3.10 is supported.
-pre-commit==4.6.2
-ruff==0.17.5
+# pre-commit 4.7 dropped Python 3.10 support; keep a compatible pin on 3.10.
+pre-commit==4.6.2; python_version < "3.11"
+pre-commit==4.7.0; python_version >= "3.11"
+ruff==0.17.6
