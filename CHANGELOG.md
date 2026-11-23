@@ -3,13 +3,13 @@
 All notable changes will be documented here. The project intends to use
 [Semantic Versioning](https://semver.org/).
 
-## [1.0.1] - 2026-11-22
+## [1.0.1] - 2026-11-23
 
 ### Added
 
-- Polished English and Simplified Chinese README pages with a new SVG banner,
-  badges, quick-start commands, starter bundles, a routing table, a collapsible
-  skill catalog, an architecture diagram, examples, provenance, and licensing.
+- Redesigned the English and Simplified Chinese README landing pages with a
+  stronger hero banner, a one-command quick start, mobile-friendly terminology
+  lists, collapsible starter bundles, and a concise catalog.
 - Added `docs/INSTALL.md` with platform-specific installation, archive checksum
   verification, upgrades, manual installation, and troubleshooting guidance.
 - Added `scripts/check_all.py` as the canonical 19-stage validation command for
@@ -24,6 +24,8 @@ All notable changes will be documented here. The project intends to use
   in the generated skill index.
 - Updated contributor and maintainer documentation to use the aggregate
   validation command.
+- Moved the frontmatter migration report default to the ignored `reports/`
+  directory and removed the stale report from the public documentation payload.
 
 ### Fixed
 

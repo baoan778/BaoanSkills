@@ -63,3 +63,5 @@ def test_readme_starter_bundles_use_public_skills_only() -> None:
                 if token.startswith("-"):
                     continue
                 assert token in available, f"{token!r} is not in the public allowlist"
+def test_public_docs_exclude_transient_migration_report() -> None:
+    assert not (ROOT / "docs" / "frontmatter-migration-report.json").exists()

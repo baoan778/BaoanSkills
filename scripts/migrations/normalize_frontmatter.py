@@ -112,7 +112,7 @@ def normalize(path: Path) -> tuple[str, dict, list[str]]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
-    parser.add_argument("--report", type=Path, default=ROOT / "docs" / "frontmatter-migration-report.json")
+    parser.add_argument("--report", type=Path, default=ROOT / "reports" / "frontmatter-migration-report.json")
     args = parser.parse_args()
     changed = 0
     failures = 0

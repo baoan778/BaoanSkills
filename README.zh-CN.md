@@ -8,9 +8,10 @@
 
 <p align="center">
   <a href="#快速开始">快速开始</a> ·
+  <a href="#推荐组合">推荐组合</a> ·
+  <a href="#技能目录">技能目录</a> ·
+  <a href="docs/ROUTING.md">路由指南</a> ·
   <a href="docs/INSTALL.md">安装指南</a> ·
-  <a href="docs/SKILLS_INDEX.md">技能目录</a> ·
-  <a href="docs/ROUTING.md">路由规则</a> ·
   <a href="CHANGELOG.md">更新日志</a>
 </p>
 
@@ -23,25 +24,13 @@
 </p>
 
 <p align="center">
-  <strong>为编码智能体提供一套有纪律的安全工作流。</strong><br>
-  聚焦的执行路径 · 按需加载的知识 · 明确的授权边界
+  <strong>39 个安全技能，一套有纪律的工作流。</strong><br>
+  聚焦的执行路径、按需加载的知识、明确的授权边界。
 </p>
 
-BaoanSkills 是面向 Codex 及兼容智能体的开源安全技能库，目前包含
+BaoanSkills 是面向 Codex 及兼容智能体的开源安全技能库，包含
 **39 个可验证来源的安全技能**，覆盖 CTF、授权应用安全测试、权限评估和安全审计。
-
-> [!IMPORTANT]
-> **仅限授权使用。** 这些技能只能用于 CTF 环境、自有实验环境，或已获得明确书面授权的系统。公开目标、扫描结果或工具存在本身都不构成授权。执行主动测试前请阅读 [授权边界](docs/AUTHORIZATION.md)。
-
-## 为什么选择 BaoanSkills
-
-| 常见问题 | BaoanSkills 的做法 |
-|---|---|
-| 超长提示词淹没真正的工作流 | 用聚焦的 `SKILL.md` 作为入口，只在需要时加载详细参考 |
-| 每次会话输出差异很大 | 明确证据标准、停止条件和交付结果，让过程可复现 |
-| 攻击性工具容易被误用 | 每个技能都包含授权边界和范围感知的执行规则 |
-| 第三方内容难以验证 | 固定上游提交、保留许可证证据、逐文件 SHA-256 锁定、安装失败即中止 |
-| 全量安装造成技能噪声 | 无额外运行时依赖的安装器，支持单项、组合或全量安装 |
+每个技能只在需要时加载对应资料，不需要把整个知识库塞进上下文。
 
 ## 快速开始
 
@@ -50,19 +39,13 @@ BaoanSkills 是面向 Codex 及兼容智能体的开源安全技能库，目前�
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/baoan778/BaoanSkills.git
-cd BaoanSkills
-python3 scripts/install_skills.py --list
-python3 scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
+git clone https://github.com/baoan778/BaoanSkills.git && cd BaoanSkills && python3 scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 ```
 
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/baoan778/BaoanSkills.git
-Set-Location BaoanSkills
-python scripts\install_skills.py --list
-python scripts\install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
+git clone https://github.com/baoan778/BaoanSkills.git; Set-Location BaoanSkills; python scripts\install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 ```
 
 安装后重启或重新加载智能体。默认安装目录为 `$CODEX_HOME/skills`（已设置
@@ -72,36 +55,76 @@ python scripts\install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 发布包下载、SHA-256 校验、更新和故障排查请见
 **[安装指南](docs/INSTALL.md)**。
 
-### 推荐组合
+> [!IMPORTANT]
+> **仅限授权使用。** 这些技能只能用于 CTF 环境、自有实验环境，或已获得明确书面授权的系统。公开目标、扫描结果或工具存在本身都不构成授权。执行主动测试前请阅读 [授权边界](docs/AUTHORIZATION.md)。
 
-| 使用目标 | 安装命令 |
-|---|---|
-| CTF 基础组合 | `python scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-forensics ctf-reverse ctf-pwn ctf-writeup` |
-| 授权 Web 测试 | `python scripts/install_skills.py ethical-hacking-methodology top-web-vulnerabilities sql-injection-testing xss-html-injection idor-testing pentest-checklist` |
-| 云与主机评估 | `python scripts/install_skills.py aws-penetration-testing linux-privilege-escalation windows-privilege-escalation ssh-penetration-testing` |
-| 代码与 CI 审计 | `python scripts/install_skills.py agentic-actions-auditor semgrep-rule-creator burpsuite-project-parser` |
-| 安装全部技能 | `python scripts/install_skills.py --all` |
+## 为什么选择 BaoanSkills
 
-如果系统中没有 `python` 命令，请按平台改用 `python3`。
+- **聚焦执行。** 用简短的 `SKILL.md` 入口选择最窄工作流，只在任务需要时加载详细参考。
+- **结果可复现。** 明确证据标准、停止条件和输出要求，让每次代理运行都更容易复核和重跑。
+- **默认安全。** 每个技能都包含授权边界和范围感知的执行规则。
+- **来源可信。** 固定上游提交、保留许可证证据、逐文件 SHA-256 锁定，安装失败即中止。
+- **按需安装。** 无额外运行时依赖的安装器支持单项、组合或全量安装。
 
-## 找到合适的技能
+## 从哪里开始
 
-| 当前任务 | 首选技能 | 何时切换 |
-|---|---|---|
-| 不熟悉的 CTF 题目包 | `solve-challenge` | 分类明确后转入更窄的专项技能 |
-| RSA、ECC、密码或 PRNG | `ctf-crypto` | 只有密码问题属于附带因素时才使用 `ctf-misc` |
-| 原生二进制利用 | `ctf-pwn` | 主要障碍是理解程序时先用 `ctf-reverse` |
-| 逆向分析 | `ctf-reverse` | 开始利用阶段后转入 `ctf-pwn` |
-| CTF Web 应用 | `ctf-web` | 正式授权评估应使用 AppSec 技能 |
-| 磁盘、内存、网络或信号取证 | `ctf-forensics` | 独立 PCAP 审查可使用 `wireshark-analysis` |
-| 已解出题目，准备写题解 | `ctf-writeup` | 与产出证据的专项技能配合使用 |
-| 已授权的 Web 应用 | `top-web-vulnerabilities` | 明确漏洞类别后转入专项测试技能 |
-| 已授权的 API 或漏洞赏金范围 | `api-fuzzing-bug-bounty` | 按范围加入认证、IDOR 或注入技能 |
-| AWS、Linux 或 Windows 环境 | `aws-penetration-testing`、`linux-privilege-escalation` 或 `windows-privilege-escalation` | 主动或变更操作前必须确认书面授权 |
-| 调用 AI 智能体的 GitHub Actions | `agentic-actions-auditor` | 需要可复用静态检查时使用 `semgrep-rule-creator` |
-| 本地 CTF 知识检索 | `ctf-knowledge-base` | 实际求解交给匹配的专项技能 |
+- **不熟悉的 CTF 题目包：** 先用 `solve-challenge`，分类明确后转入更窄的专项技能。
+- **密码、Web、逆向、Pwn 或取证：** 使用 `ctf-crypto`、`ctf-web`、`ctf-reverse`、`ctf-pwn` 或 `ctf-forensics`。
+- **授权的应用安全测试：** 从 `ethical-hacking-methodology` 或 `top-web-vulnerabilities` 开始，再按漏洞类别细化。
+- **云与主机评估：** 使用 `aws-penetration-testing`、`linux-privilege-escalation` 或 `windows-privilege-escalation`。
+- **代码、CI 与 AI 工作流审计：** 使用 `semgrep-rule-creator`、`agentic-actions-auditor` 或 `burpsuite-project-parser`。
+- **本地知识检索：** 使用 `ctf-knowledge-base` 查找资料，再把实际求解交给匹配的专项技能。
 
 完整路由与重叠规则见 [docs/ROUTING.md](docs/ROUTING.md)。
+
+## 推荐组合
+
+以下命令可直接复制使用。macOS 或 Linux 没有 `python` 命令时，请改用 `python3`。
+
+<details>
+<summary><strong>CTF 基础组合</strong> · 7 个技能</summary>
+
+```bash
+python scripts/install_skills.py solve-challenge ctf-web ctf-crypto ctf-forensics ctf-reverse ctf-pwn ctf-writeup
+```
+
+</details>
+
+<details>
+<summary><strong>授权 Web 测试</strong> · 6 个技能</summary>
+
+```bash
+python scripts/install_skills.py ethical-hacking-methodology top-web-vulnerabilities sql-injection-testing xss-html-injection idor-testing pentest-checklist
+```
+
+</details>
+
+<details>
+<summary><strong>云与主机评估</strong> · 4 个技能</summary>
+
+```bash
+python scripts/install_skills.py aws-penetration-testing linux-privilege-escalation windows-privilege-escalation ssh-penetration-testing
+```
+
+</details>
+
+<details>
+<summary><strong>代码与 CI 审计</strong> · 3 个技能</summary>
+
+```bash
+python scripts/install_skills.py agentic-actions-auditor semgrep-rule-creator burpsuite-project-parser
+```
+
+</details>
+
+<details>
+<summary><strong>安装全部技能</strong> · 39 个技能</summary>
+
+```bash
+python scripts/install_skills.py --all
+```
+
+</details>
 
 ## 技能目录
 
@@ -148,12 +171,12 @@ python scripts\install_skills.py solve-challenge ctf-web ctf-crypto ctf-writeup
 ## 工作方式
 
 ```mermaid
-flowchart LR
-    A["任务与范围"] --> B["智能体选择\n最匹配的技能"]
+flowchart TD
+    A["任务与范围"] --> B["选择最匹配的技能"]
     B --> C["SKILL.md\n路由与安全边界"]
     C --> D["按需加载\n参考文档与脚本"]
     D --> E["可复现的结果"]
-    A -. "授权检查" .-> C
+    C -. "授权检查" .-> A
 
     classDef task fill:#0d263b,stroke:#58a6ff,color:#e2e8f0
     classDef skill fill:#123a3a,stroke:#38e8c4,color:#e2e8f0
@@ -171,7 +194,8 @@ flowchart LR
 
 这样既能控制上下文体积，又能保留真实工作所需的深度。
 
-## 使用示例
+<details>
+<summary><strong>查看使用示例</strong></summary>
 
 ```text
 使用 ctf-crypto 技能分析附件中的 RSA 题目，给出可复现的解题路径并恢复 flag。
@@ -191,10 +215,15 @@ flowchart LR
 使用 semgrep-rule-creator 将这个脆弱代码模式转换为经过正反例测试的 Semgrep 规则。
 ```
 
+</details>
+
 ## 来源与质量
 
 发布范围由 [release/public-skills.txt](release/public-skills.txt) 控制，每个公开技能
 文件都在 [release/provenance.lock.json](release/provenance.lock.json) 中记录 SHA-256。
+
+<details>
+<summary><strong>来源与许可证摘要</strong> · 39 个技能</summary>
 
 | 来源 | 技能数 | 许可证 | 上游 |
 |---|---:|---|---|
@@ -202,10 +231,17 @@ flowchart LR
 | 授权安全测试 | 24 | MIT | `zebbern/claude-code-guide`（固定提交） |
 | 安全审计工具 | 3 | CC BY-SA 4.0 | `trailofbits/skills`（固定提交） |
 
-安装器会在复制前验证请求的全部文件；缺失、额外、符号链接或哈希不匹配都会
-中止安装。发布包附带 SHA-256 校验文件，并在发布前完成解压、示例安装和篡改
-拒绝测试。CI 覆盖 Linux、Windows、Python 3.10–3.12，并运行 CodeQL、gitleaks、
-链接、资源、Markdown、来源和发布就绪检查。
+</details>
+
+补充保证：
+
+- 安装器会在复制前验证请求的全部文件；缺失、额外、符号链接或哈希不匹配都会中止安装；
+- 发布包附带 SHA-256 校验文件，并在发布前完成解压、示例安装和篡改拒绝测试；
+- CI 覆盖 Linux、Windows、Python 3.10–3.12；
+- CodeQL、gitleaks、链接、资源、Markdown、来源和发布就绪检查是必需质量门禁。
+
+来源审查模型见 [docs/PROVENANCE.md](docs/PROVENANCE.md) 与
+[docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md)。
 
 ## 开发与贡献
 
@@ -230,5 +266,12 @@ python3 scripts/check_all.py
 
 根目录 MIT 许可证不会重新许可第三方材料。`source: original` 表示维护者对其余
 12 个 CTF 技能的归属声明；目前没有可用于独立证明该状态的外部历史记录。
+
+## 参与贡献
+
+欢迎在保留来源、许可证、路由质量和授权边界的前提下参与贡献。请先阅读
+[CONTRIBUTING.md](CONTRIBUTING.md)、
+[docs/ADDING_A_SKILL.md](docs/ADDING_A_SKILL.md) 和
+[docs/SKILL_REVIEW.md](docs/SKILL_REVIEW.md)。
 
 由 [@baoan778](https://github.com/baoan778) 维护。
