@@ -85,19 +85,24 @@ untouched for that request.
 
 ## Install from a release archive
 
-The latest archives are attached to the
-[GitHub release](https://github.com/baoan778/BaoanSkills/releases/latest). Both
-archives contain one top-level `baoanskills-public/` directory.
+Releases built after `v1.0.1` attach exactly two files to the
+[GitHub release](https://github.com/baoan778/BaoanSkills/releases): a
+`baoanskills-release.zip` archive and a `SHA256SUMS` checksum manifest. The
+`v1.0.1` release predates this layout and keeps its legacy assets unchanged.
+The examples below use `vX.Y.Z`; replace it with the version shown on the
+release page.
 
 ### Windows PowerShell
 
 ```powershell
-$version = "v1.0.1"
+$version = "vX.Y.Z"
 $archive = "baoanskills-release.zip"
 Invoke-WebRequest "https://github.com/baoan778/BaoanSkills/releases/download/$version/$archive" -OutFile $archive
-Invoke-WebRequest "https://github.com/baoan778/BaoanSkills/releases/download/$version/$archive.sha256" -OutFile "$archive.sha256"
+Invoke-WebRequest "https://github.com/baoan778/BaoanSkills/releases/download/$version/SHA256SUMS" -OutFile SHA256SUMS
 
-$expected = (Get-Content "$archive.sha256" -Raw).Split()[0].ToLowerInvariant()
+$line = Get-Content .\SHA256SUMS | Where-Object { $_ -match '\s+baoanskills-release\.zip$' }
+if (-not $line) { throw "SHA256SUMS does not list baoanskills-release.zip" }
+$expected = ($line -split '\s+')[0].ToLowerInvariant()
 $actual = (Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($actual -ne $expected) { throw "Archive checksum mismatch" }
 
@@ -109,24 +114,24 @@ python scripts\install_skills.py ctf-writeup --dest "$HOME\.codex\skills"
 ### macOS / Linux
 
 ```bash
-version=v1.0.1
-archive=baoanskills-release.tar.gz
+version=vX.Y.Z
+archive=baoanskills-release.zip
 curl -fLO "https://github.com/baoan778/BaoanSkills/releases/download/$version/$archive"
-curl -fLO "https://github.com/baoan778/BaoanSkills/releases/download/$version/$archive.sha256"
+curl -fLO "https://github.com/baoan778/BaoanSkills/releases/download/$version/SHA256SUMS"
 
 if command -v sha256sum >/dev/null 2>&1; then
-  sha256sum -c "$archive.sha256"
+  sha256sum -c SHA256SUMS
 else
-  shasum -a 256 -c "$archive.sha256"
+  shasum -a 256 -c SHA256SUMS
 fi
 
-tar -xzf "$archive"
+unzip -q "$archive"
 cd baoanskills-public
 python3 scripts/install_skills.py ctf-writeup
 ```
 
-Replace `v1.0.1` with the version shown on the release page. Do not use a
-checksum file from a different release.
+Download the archive and `SHA256SUMS` from the same release. A checksum
+manifest from a different release is not valid for this archive.
 
 ## Update an installation
 

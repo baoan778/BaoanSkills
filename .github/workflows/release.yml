@@ -47,13 +47,11 @@ jobs:
       - name: Package release payload
         run: python scripts/package_release.py --snapshot ../baoanskills-public --output-dir .
 
-      - name: Smoke-test release archives
+      - name: Smoke-test release archive
         shell: bash
         run: |
           set -euo pipefail
-          for archive in baoanskills-release.tar.gz baoanskills-release.zip; do
-            sha256sum -c "${archive}.sha256"
-          done
+          sha256sum -c SHA256SUMS
           smoke_root="$RUNNER_TEMP/baoanskills-release-smoke"
           rm -rf "$smoke_root"
           mkdir -p "$smoke_root"
@@ -74,10 +72,8 @@ jobs:
         with:
           name: release-${{ github.run_id }}
           path: |
-            baoanskills-release.tar.gz
-            baoanskills-release.tar.gz.sha256
             baoanskills-release.zip
-            baoanskills-release.zip.sha256
+            SHA256SUMS
           if-no-files-found: error
           retention-days: 30
 
@@ -87,10 +83,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" \
-            baoanskills-release.tar.gz \
-            baoanskills-release.tar.gz.sha256 \
             baoanskills-release.zip \
-            baoanskills-release.zip.sha256 \
+            SHA256SUMS \
             --verify-tag \
             --generate-notes \
             --title "$GITHUB_REF_NAME"

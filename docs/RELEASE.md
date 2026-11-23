@@ -57,12 +57,12 @@ to `baoan778/BaoanSkills`. It:
 1. validates the tag format;
 2. installs the pinned development dependencies;
 3. builds and validates the clean public snapshot;
-4. creates deterministic `baoanskills-release.tar.gz` and
-   `baoanskills-release.zip` archives with matching SHA-256 files;
-5. verifies both checksums, extracts the zip, installs a sample skill, and
+4. creates a deterministic `baoanskills-release.zip` archive and a
+   `SHA256SUMS` manifest;
+5. verifies the manifest, extracts the zip, installs a sample skill, and
    confirms that a tampered snapshot is rejected without creating a target;
-6. uploads all four artifacts to the workflow run;
-7. creates a GitHub release with generated notes and both archive formats.
+6. uploads the zip and checksum manifest to the workflow run;
+7. creates a GitHub release with generated notes, the zip, and the manifest.
 
 Only create the tag after the release commit is merged and the validation and
 CodeQL checks are green. Sign the tag when a signing key is available.
@@ -87,22 +87,30 @@ These controls live in GitHub settings rather than repository files:
 Linux and macOS:
 
 ```bash
-sha256sum -c baoanskills-release.tar.gz.sha256
+if command -v sha256sum >/dev/null 2>&1; then
+  sha256sum -c SHA256SUMS
+else
+  shasum -a 256 -c SHA256SUMS
+fi
 ```
 
 Windows PowerShell:
 
 ```powershell
-$expected = (Get-Content .\baoanskills-release.zip.sha256 -Raw).Split()[0]
-$actual = (Get-FileHash .\baoanskills-release.zip -Algorithm SHA256).Hash.ToLower()
+$line = Get-Content .\SHA256SUMS | Where-Object { $_ -match '\s+baoanskills-release\.zip$' }
+if (-not $line) { throw 'SHA256SUMS does not list baoanskills-release.zip' }
+$expected = ($line -split '\s+')[0].ToLowerInvariant()
+$actual = (Get-FileHash .\baoanskills-release.zip -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($actual -ne $expected) { throw 'Archive checksum mismatch' }
 ```
 
-The `.zip` archive is the recommended Windows download. Both formats contain
-the same `baoanskills-public` directory as their single top-level payload.
+Releases built by this workflow contain only the ZIP and its `SHA256SUMS`
+manifest. The ZIP contains the `baoanskills-public` directory as its single
+top-level payload. The `v1.0.1` release predates this layout and keeps its
+legacy assets unchanged.
 
-The archive checksum protects transfer integrity. The embedded provenance lock
-detects per-file drift inside the snapshot, but it is not a cryptographic
+The checksum in `SHA256SUMS` protects transfer integrity. The embedded provenance
+lock detects per-file drift inside the snapshot, but it is not a cryptographic
 signature; verify release provenance separately when that assurance is needed.
 
 ## Publish
@@ -132,6 +140,6 @@ gitleaks dir ../baoanskills-public --redact --verbose
 - Verify the release archive contains no unlisted skills or raw local
   knowledge-base files. Curated `ctf-knowledge-base` references and its path-only
   manifest are allowed.
-- Check the attached SHA-256 checksum for each attached archive.
+- Verify the attached `SHA256SUMS` manifest against the attached ZIP.
 - Keep the previous release available if users need to roll back.
 - If a secret is discovered, revoke it first and then remove it from history.
